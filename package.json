@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/DennisOnder/first-pr/issues"
   },
-  "homepage": "https://github.com/DennisOnder/first-pr#readme"
+  "homepage": "https://github.com/DennisOnder/first-pr#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
 }
