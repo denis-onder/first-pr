@@ -1,0 +1,19 @@
+{
+  "name": "first-pr",
+  "version": "1.0.0",
+  "description": "Service for providing 1st PRs for new developers!",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DennisOnder/first-pr.git"
+  },
+  "author": "Dennis Onder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DennisOnder/first-pr/issues"
+  },
+  "homepage": "https://github.com/DennisOnder/first-pr#readme"
+}
