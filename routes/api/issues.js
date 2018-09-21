@@ -15,11 +15,11 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const newIssue = new Issue({
     user: req.body.user,
-    link: req.body.link,
+    link: req.body.link
   });
   newIssue.save()
     .then(post => res.json(post))
-    .catch(err => res.json(err));;
+    .catch(err => res.json(err));
 });
 
 module.exports = router;
