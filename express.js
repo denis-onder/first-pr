@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 5000;
 
-app.get('/api/requests', (req, res) => {
+app.get('/api/test', (req, res) => {
   res.json({
     id: 'Random ID',
     username: 'Username',
