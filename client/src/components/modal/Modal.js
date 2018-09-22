@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Validator from 'validator';
 
 class Modal extends Component {
 
@@ -15,14 +16,34 @@ class Modal extends Component {
   }
 
   onSubmit() {
-    console.log({user: this.state.user, link: this.state.link});
-    this.setState({
-      user: '',
-      link: ''
-    })
-    document.getElementById('userInput').value = '';
-    document.getElementById('urlInput').value = '';
-    this.closeModal();
+    const userInput = this.state.user;
+    const linkInput = this.state.link;
+    let errors = {};
+
+    if (Validator.isEmpty(userInput)) {
+      errors.user = 'User Field must be filled out.';
+    }
+     if (Validator.isEmpty(linkInput)) {
+      errors.link = 'URL Field must be filled out.';
+    }
+     if (!Validator.isURL(linkInput)) {
+      errors.link = 'The Link must be a valid URL.';
+    }
+     if (!linkInput.includes('github')) {
+      errors.link = 'The Link must be a valid GitHub URL.';
+    }
+     if (errors.user || errors.link) {
+      console.log(errors)
+    } else {
+      console.log({user: userInput, link: linkInput});
+      this.setState({
+        user: '',
+        link: ''
+      })
+      document.getElementById('userInput').value = '';
+      document.getElementById('urlInput').value = '';
+      this.closeModal();
+    }
   }
 
   onKeyUp(e) {
