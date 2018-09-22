@@ -20,6 +20,6 @@
 
 * `npm run dev - Starts both the Node and React server at the same time.`
 
-* `npm run dev-sass - Does the same thing as the dev script, except this runs the node-sass compiler in watch mode as well.`
+* `npm run dev-sass - Does the same thing as the dev script, except that this script runs the node-sass compiler in watch mode as well.`
 
 ---
