@@ -4,7 +4,7 @@
   "description": "Service for providing 1st PRs for new developers!",
   "main": "express.js",
   "scripts": {
-    "dev": "concurrently \"nodemon express\" \"npm start --prefix client\""
+    "dev": "concurrently \"nodemon express\" \"npm run dev --prefix client\""
   },
   "repository": {
     "type": "git",
