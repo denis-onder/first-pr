@@ -49,14 +49,17 @@
   .modalBody {
     background-color: #00A896;
     margin: 20% auto;
-    width: 70%;
+    width: 60%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: 0.5s;
     .modalHead {
       h3 {
         text-align: center;
         padding-top: 15px;
+        margin-right: 20px;
       }
       #closeBtn {
         float: right;
@@ -64,14 +67,94 @@
         bottom: 40px;
         right: 25px;
         font-size: 22px;
-      }
-      .inputGroup {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
+        cursor: pointer;
       }
     }
   }
+  .modalInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #submitBtn {
+      padding: 1em 2em;
+      color: #F0F3BD;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #02C39A;
+      border-radius: 25px;
+      border: none;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+      -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+      -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+      &:hover {
+        transition: 0.2s;
+        padding: 1em 3em;
+      }
+    }
+  }
+}
+
+// Inputs and Placeholders
+#userInput, #urlInput {
+  font-family: 'Montserrat';
+  text-align: center;
+  background: transparent;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  color: #F0F3BD;
+  font-size: 16px;
+  border-bottom: 1px solid #F0F3BD;
+  padding-bottom: 0.75em;
+}
+
+#userInput::placeholder, 
+#urlInput::placeholder {
+  text-align: center;
+  color: #F0F3BD !important;
+  opacity: 1;
+}
+
+#userInput:-ms-input-placeholder, 
+#urlInput:-ms-input-placeholder {
+  text-align: center;
+  color: #F0F3BD !important;
+}
+
+#userInput::-ms-input-placeholder, 
+#urlInput::-ms-input-placeholder {
+  text-align: center;
+  color: #F0F3BD !important;
+}
+
+#userInput:focus::-moz-placeholder, 
+#urlInput:focus::-moz-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important;
+}
+
+#userInput:focus:-moz-placeholder, 
+#urlInput:focus:-moz-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important;
+}
+
+#userInput:focus::-webkit-input-placeholder, 
+#urlInput:focus::-webkit-input-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important;
+}
+
+#userInput:focus::-ms-input-placeholder, 
+#urlInput:focus::-ms-input-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent#F0F3BD !important;
 }
 
 // Animations
