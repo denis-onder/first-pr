@@ -19,14 +19,28 @@ class Dashboard extends Component {
     }
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      document.getElementById('Spinner').style.display = 'none';
+      document.getElementById('title').style.display = 'block';
+    }, 3000)
+  }
+
   render() {
-    return (
-      <div className="Dashboard" onClick={this.closeModalFromOutside}>
-       <Sidebar />
-        <h1 id="title">FirstPR</h1>
-        <Modal />
-      </div>
-    )
+    let isloaded = false;
+      return (
+        <div className="Dashboard" onClick={this.closeModalFromOutside}>
+        <div id="Spinner">
+            <div class="lds-ripple">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        <Sidebar />
+          <h1 id="title">FirstPR</h1>
+          <Modal />
+        </div>
+      )
   }
 }
 export default Dashboard;
