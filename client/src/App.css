@@ -23,3 +23,47 @@
   -webkit-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75); }
+
+.Sidebar #addBtn {
+  cursor: pointer; }
+
+.Modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #F0F3BD;
+  font-family: 'Montserrat'; }
+
+.Modal .modalBody {
+  background-color: #00A896;
+  margin: 20% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 0.5s; }
+
+.Modal .modalBody .modalHead h3 {
+  text-align: center;
+  padding-top: 15px; }
+
+.Modal .modalBody .modalHead #closeBtn {
+  float: right;
+  position: relative;
+  bottom: 40px;
+  right: 25px;
+  font-size: 22px; }
+
+.Modal .modalBody .modalHead .inputGroup {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; }
+
+@keyframes modalopen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
