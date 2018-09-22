@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from '../layout/Sidebar';
 import Modal from './../modal/Modal';
+import axios from 'axios';
 
 class Dashboard extends Component {
 
@@ -20,6 +21,9 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    axios.get('/api/issues')
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));
     setTimeout(() => {
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('title').style.display = 'block';
@@ -27,16 +31,15 @@ class Dashboard extends Component {
   }
 
   render() {
-    let isloaded = false;
       return (
         <div className="Dashboard" onClick={this.closeModalFromOutside}>
         <div id="Spinner">
-            <div class="lds-ripple">
+            <div className="lds-ripple">
               <div></div>
               <div></div>
             </div>
           </div>
-        <Sidebar />
+          <Sidebar />
           <h1 id="title">FirstPR</h1>
           <Modal />
         </div>
