@@ -12,6 +12,26 @@
   left: 100px;
   font-family: 'Montserrat'; }
 
+#output {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-family: 'Montserrat';
+  color: #F0F3BD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#output div {
+  background-color: #028090;
+  padding: 1em 2em;
+  margin-bottom: 10px; }
+
+#output a {
+  text-decoration: none;
+  color: #F0F3BD; }
+
 .Sidebar {
   position: fixed;
   width: 70px;
@@ -19,14 +39,16 @@
   background-color: #028090;
   z-index: 999;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   -webkit-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75); }
 
-.Sidebar #addBtn {
-  cursor: pointer; }
+.Sidebar i {
+  cursor: pointer;
+  margin-bottom: 25px; }
 
 .Modal {
   display: none;

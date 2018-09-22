@@ -7,10 +7,11 @@ class Dashboard extends Component {
 
   constructor() {
     super();
-    this.setState = {
+    this.state = {
       issues: []
     }
     this.closeModalFromOutside = this.closeModalFromOutside.bind(this);
+    this.fetchIssues = this.fetchIssues.bind(this);
   }
 
   closeModalFromOutside(e) {
@@ -20,13 +21,18 @@ class Dashboard extends Component {
     }
   }
 
-  componentDidMount() {
+  fetchIssues() {
     axios.get('/api/issues')
-      .then(res => console.log(res.data))
+      .then(res => this.setState({ issues: res.data }))
       .catch(err => console.log(err));
+  }
+
+  componentDidMount() {
+    this.fetchIssues();
     setTimeout(() => {
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('title').style.display = 'block';
+      document.getElementById('output').style.display = 'block';
     }, 3000)
   }
 
@@ -42,6 +48,16 @@ class Dashboard extends Component {
           <Sidebar />
           <h1 id="title">FirstPR</h1>
           <Modal />
+          <div id="output">
+            {
+              this.state.issues.map(issue => (
+                <div key={issue._id} id={issue._id}>
+                  <p>{issue.user}</p>
+                  <a href={issue.link} target="_blank">{issue.link}</a>
+                </div>
+              ))
+            }
+          </div>
         </div>
       )
   }
