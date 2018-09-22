@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Issue = require('../../models/Issue');
-const validateInput = require('../../validation/validateInput');
 
 // Get all issues
 router.get('/', (req, res) => {
