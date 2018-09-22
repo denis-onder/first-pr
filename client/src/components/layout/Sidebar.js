@@ -4,17 +4,18 @@ class Sidebar extends Component {
 
   constructor() {
     super();
-    this.onClick = this.onClick.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
-
-  onClick() {
-    console.log('Hello');
+  
+  openModal() {
+    const modal = document.getElementById('Modal');
+    modal.style.display = 'block';
   }
 
   render() {
     return (
       <div className="Sidebar">
-        <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.onClick}></i>
+        <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.openModal}></i>
       </div>
     )
   }

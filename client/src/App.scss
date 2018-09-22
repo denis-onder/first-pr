@@ -37,6 +37,7 @@
 
 // Modal Styles
 .Modal {
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -54,7 +55,7 @@
     -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
     -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     .modalHead {
       h3 {
         text-align: center;
