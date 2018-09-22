@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Validator from 'validator';
+import axios from 'axios';
 
 class Modal extends Component {
 
@@ -35,7 +36,12 @@ class Modal extends Component {
      if (errors.user || errors.link) {
       console.log(errors)
     } else {
-      console.log({user: userInput, link: linkInput});
+      const newIssue = {
+        user: userInput,
+        link: linkInput
+      };
+      axios.post('/api/issues', newIssue)
+        .catch(err => console.log(err));
       this.setState({
         user: '',
         link: ''
