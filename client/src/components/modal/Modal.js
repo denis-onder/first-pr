@@ -11,6 +11,7 @@ class Modal extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onSubmit() {
@@ -22,6 +23,12 @@ class Modal extends Component {
     document.getElementById('userInput').value = '';
     document.getElementById('urlInput').value = '';
     this.closeModal();
+  }
+
+  onKeyUp(e) {
+    if (e.keyCode === 13 || e.which === 13) {
+      this.onSubmit();
+    }
   }
 
   onChange(e) {
@@ -37,7 +44,7 @@ class Modal extends Component {
 
   render() {
     return (
-      <div className="Modal" id="Modal">
+      <div className="Modal" id="Modal" onKeyUp={this.onKeyUp}>
         <div className="modalBody">
           <div className="modalHead">
             <h3>Add a new issue!</h3>
