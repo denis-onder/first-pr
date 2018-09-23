@@ -1,12 +1,18 @@
 // Imports
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+// Variables
+$font-color: #F0F3BD;
+$primary-color: #05668D;
+$secondary-color: #028090;
+$third-color: #00A896;
+
 // Dasboard Styles
 .Dashboard {
   width: 100%;
   height: 100vh;
-  color: #F0F3BD;
-  background: #05668D;
+  color: $font-color;
+  background: $primary-color;
   #title {
     display: none;
     position: absolute;
@@ -23,18 +29,18 @@
   top: 50px;
   right: 100px;
   font-family: 'Montserrat';
-  color: #F0F3BD;
+  color: $font-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   div {
-    background-color: #028090;
+    background-color: $secondary-color;
     padding: 1em 2em;
     margin-bottom: 10px;
   }
   a {
     text-decoration: none;
-    color: #F0F3BD;
+    color: $font-color;
   }
 }
 
@@ -43,7 +49,7 @@
   position: fixed;
   width: 70px;
   height: 100%;
-  background-color: #028090;
+  background-color: $secondary-color;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -68,7 +74,7 @@
   -webkit-box-shadow: -3px 0px 33px -6px rgba(0,0,0,0.75);
   -moz-box-shadow: -3px 0px 33px -6px rgba(0,0,0,0.75);
   box-shadow: -3px 0px 33px -6px rgba(0,0,0,0.75);
-  background-color: #028090;
+  background-color: $secondary-color;
 }
 
 // Modal Styles
@@ -81,10 +87,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
-  color: #F0F3BD;
+  color: $font-color;
   font-family: 'Montserrat';
   .modalBody {
-    background-color: #00A896;
+    background-color: $third-color;
     margin: 20% auto;
     width: 60%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),  0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -115,7 +121,7 @@
     align-items: center;
     #submitBtn {
       padding: 1em 2em;
-      color: #F0F3BD;
+      color: $font-color;
       font-family: 'Montserrat';
       font-weight: bold;
       cursor: pointer;
@@ -141,29 +147,29 @@
   outline: 0;
   border: none;
   box-shadow: none;
-  color: #F0F3BD;
+  color: $font-color;
   font-size: 16px;
-  border-bottom: 1px solid #F0F3BD;
+  border-bottom: 1px solid $font-color;
   padding-bottom: 0.75em;
 }
 
 #userInput::placeholder, 
 #urlInput::placeholder {
   text-align: center;
-  color: #F0F3BD !important;
+  color: $font-color !important;
   opacity: 1;
 }
 
 #userInput:-ms-input-placeholder, 
 #urlInput:-ms-input-placeholder {
   text-align: center;
-  color: #F0F3BD !important;
+  color: $font-color !important;
 }
 
 #userInput::-ms-input-placeholder, 
 #urlInput::-ms-input-placeholder {
   text-align: center;
-  color: #F0F3BD !important;
+  color: $font-color !important;
 }
 
 #userInput:focus::-moz-placeholder, 
@@ -191,14 +197,14 @@
 #urlInput:focus::-ms-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent#F0F3BD !important;
+  color: transparent $font-color !important;
 }
 
 // Spinner
 #Spinner {
   height: 100vh;
   width: 100%;
-  background-color: #028090;
+  background-color: $secondary-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,7 +218,7 @@
   height: 64px;
   div {
     position: absolute;
-    border: 4px solid #F0F3BD;
+    border: 4px solid $font-color;
     opacity: 1;
     border-radius: 50%;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
