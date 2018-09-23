@@ -15,6 +15,12 @@ class Dashboard extends Component {
     this.fetchIssues = this.fetchIssues.bind(this);
   }
 
+  fetchIssues() {
+    axios.get('/api/issues')
+      .then(res => this.setState({ issues: res.data }))
+      .catch(err => console.log(err));
+  }
+
   closeModalFromOutside(e) {
     const modal = document.getElementById('Modal');
     if (e.target === modal) {
@@ -22,10 +28,9 @@ class Dashboard extends Component {
     }
   }
 
-  fetchIssues() {
-    axios.get('/api/issues')
-      .then(res => this.setState({ issues: res.data }))
-      .catch(err => console.log(err));
+  openMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('openMenu');
   }
 
   componentDidMount() {
@@ -47,8 +52,9 @@ class Dashboard extends Component {
             </div>
           </div>
           <Sidebar />
+          <Menu />
           <h1 id="title">FirstPR</h1>
-          <i className="fas fa-bars fa-2x" id="menuBtn"></i>
+          <i className="fas fa-bars fa-2x" id="menuBtn" onClick={this.openMenu}></i>
           <Modal />
           <div id="output">
             {
