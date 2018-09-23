@@ -25,21 +25,20 @@ class Modal extends Component {
     const userInput = this.state.user;
     const linkInput = this.state.link;
     let errors = {};
-
-    this.checkUsername(userInput);
     if (Validator.isEmpty(userInput)) {
       errors.user = 'User Field must be filled out.';
     }
-     if (Validator.isEmpty(linkInput)) {
+    this.checkUsername(userInput);
+    if (Validator.isEmpty(linkInput)) {
       errors.link = 'URL Field must be filled out.';
     }
-     if (!Validator.isURL(linkInput)) {
+    if (!Validator.isURL(linkInput)) {
       errors.link = 'The Link must be a valid URL.';
     }
-     if (!linkInput.includes('github')) {
+    if (!linkInput.includes('github')) {
       errors.link = 'The Link must be a valid GitHub URL.';
     }
-     if (errors.user || errors.link) {
+    if (errors.user || errors.link) {
       this.setState({
         errors: {
           user: errors.user,
