@@ -4,7 +4,9 @@ class Menu extends Component {
 
   closeMenu() {
     const menu = document.getElementById('menu');
+    const arrow = document.getElementById('closeMenuBtn');
     menu.classList.toggle('openMenu');
+    arrow.classList.toggle('displayArrow');
   }
 
   render() {

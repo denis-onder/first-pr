@@ -30,7 +30,9 @@ class Dashboard extends Component {
 
   openMenu() {
     const menu = document.getElementById('menu');
+    const arrow = document.getElementById('closeMenuBtn');
     menu.classList.toggle('openMenu');
+    arrow.classList.toggle('displayArrow');
   }
 
   componentDidMount() {
@@ -45,26 +47,28 @@ class Dashboard extends Component {
   render() {
       return (
         <div className="Dashboard" onClick={this.closeModalFromOutside}>
-        <div id="Spinner">
-            <div className="lds-ripple">
-              <div></div>
-              <div></div>
+        <div className="wrapper">
+          <div id="Spinner">
+              <div className="lds-ripple">
+                <div></div>
+                <div></div>
+              </div>
             </div>
-          </div>
-          <Sidebar />
-          <Menu />
-          <h1 id="title">FirstPR</h1>
-          <i className="fas fa-bars fa-2x" id="menuBtn" onClick={this.openMenu}></i>
-          <Modal />
-          <div id="output">
-            {
-              this.state.issues.map(issue => (
-                <div key={issue._id} id={issue._id}>
-                  <p>{issue.user}</p>
-                  <a href={issue.link} target="_blank">{issue.link}</a>
-                </div>
-              ))
-            }
+            <Sidebar />
+            <Menu />
+            <h1 id="title">FirstPR</h1>
+            <i className="fas fa-bars fa-2x" id="menuBtn" onClick={this.openMenu}></i>
+            <Modal />
+            <div id="output">
+              {
+                this.state.issues.map(issue => (
+                  <div key={issue._id} id={issue._id}>
+                    <p>{issue.user}</p>
+                    <a href={issue.link} target="_blank">{issue.link}</a>
+                  </div>
+                ))
+              }
+            </div>
           </div>
         </div>
       )

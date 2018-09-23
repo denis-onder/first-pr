@@ -69,17 +69,19 @@
   background-color: #028090; }
 
 .Menu #closeMenuBtn {
+  opacity: 0;
   float: right;
-  margin: 10px 10px 0 0;
-  color: #F0F3BD; }
+  margin: 25px 50px 0 0;
+  color: #F0F3BD;
+  cursor: pointer; }
 
 .openMenu {
   animation-name: openMenu;
   animation-duration: 0.2s;
   animation-fill-mode: forwards; }
 
-.closeMenu {
-  animation-name: closeMenu;
+.displayArrow {
+  animation-name: displayArrow;
   animation-duration: 0.2s;
   animation-fill-mode: forwards; }
 
@@ -242,10 +244,10 @@
   0% {
     width: 0%; }
   100% {
-    width: 210px; } }
+    width: 370px; } }
 
-@keyframes closeMenu {
+@keyframes displayArrow {
   0% {
-    width: 210px; }
+    opacity: 0; }
   100% {
-    width: 0%; } }
+    opacity: 1; } }
