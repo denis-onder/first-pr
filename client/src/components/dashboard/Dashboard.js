@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Sidebar from '../layout/Sidebar';
+import Menu from '../layout/Menu';
 import Modal from './../modal/Modal';
 import axios from 'axios';
 

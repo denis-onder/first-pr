@@ -50,6 +50,17 @@
   cursor: pointer;
   margin-bottom: 25px; }
 
+.Menu {
+  position: fixed;
+  right: 0;
+  width: 210px;
+  height: 100%;
+  z-index: 999;
+  -webkit-box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
+  background-color: #028090; }
+
 .Modal {
   display: none;
   position: fixed;
