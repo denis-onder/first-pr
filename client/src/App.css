@@ -143,6 +143,12 @@
   transition: 0.2s;
   padding: 1em 3em; }
 
+.Modal .modalInputs #userError,
+.Modal .modalInputs #linkError {
+  padding: 0.5em 0em;
+  color: red;
+  font-weight: bold; }
+
 #userInput, #urlInput {
   font-family: 'Montserrat';
   text-align: center;

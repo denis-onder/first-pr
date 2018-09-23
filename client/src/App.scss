@@ -162,6 +162,12 @@ $third-color: #00A896;
         padding: 1em 3em;
       }
     }
+    #userError,
+    #linkError {
+      padding: 0.5em 0em;
+      color: red;
+      font-weight: bold;
+    }
   }
 }
 

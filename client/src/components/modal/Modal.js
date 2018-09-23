@@ -8,12 +8,17 @@ class Modal extends Component {
     super();
     this.state = {
         user: '',
-        link: ''
+        link: '',
+        errors: {
+          user: '',
+          link: ''
+        }
     }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.onKeyUp = this.onKeyUp.bind(this);
+    this.checkUsername = this.checkUsername.bind(this);
   }
 
   onSubmit() {
@@ -21,6 +26,7 @@ class Modal extends Component {
     const linkInput = this.state.link;
     let errors = {};
 
+    this.checkUsername(userInput);
     if (Validator.isEmpty(userInput)) {
       errors.user = 'User Field must be filled out.';
     }
@@ -34,7 +40,12 @@ class Modal extends Component {
       errors.link = 'The Link must be a valid GitHub URL.';
     }
      if (errors.user || errors.link) {
-      console.log(errors)
+      this.setState({
+        errors: {
+          user: errors.user,
+          link: errors.link
+        }
+      });
     } else {
       const newIssue = {
         user: userInput,
@@ -69,6 +80,17 @@ class Modal extends Component {
     modal.style.display = 'none';
   }
 
+  checkUsername(user) {
+    fetch(`https://api.github.com/users/${user}`)
+      .then(res => res.json())
+      .then(data => {
+        if(data.message === 'Not Found') {
+          this.setState({errors: {user: 'User does not exist'}});
+        }
+      })
+      .catch(err => console.log(err));
+  }
+
   render() {
     return (
       <div className="Modal" id="Modal" onKeyUp={this.onKeyUp}>
@@ -79,8 +101,14 @@ class Modal extends Component {
           </div>
             <div className="modalInputs">
               <input type="text" placeholder="GitHub Username:" id="userInput" name="user" ref={this.userInput} value={this.state.user} onChange={this.onChange} />
+                {
+                  this.state.errors.user ? <p id="userError">{this.state.errors.user}</p> : <p id="userError"></p>
+                }
               <br/>
               <input type="text" placeholder="Repository URL:" id="urlInput" name="link" ref={this.linkInput} value={this.state.link} onChange={this.onChange} />
+                {
+                  this.state.errors.link ? <p id="linkError">{this.state.errors.link}</p> : <p id="linkError"></p>
+                }
               <br/>
               <button id="submitBtn" onClick={this.onSubmit}>Submit!</button>
               <br/>
