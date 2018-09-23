@@ -20,6 +20,13 @@ $third-color: #00A896;
     left: 100px;
     font-family: 'Montserrat';
   }
+  #menuBtn {
+    color: $font-color;
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+  }
 }
 
 // Output Styles

@@ -48,6 +48,7 @@ class Dashboard extends Component {
           </div>
           <Sidebar />
           <h1 id="title">FirstPR</h1>
+          <i className="fas fa-bars fa-2x" id="menuBtn"></i>
           <Modal />
           <div id="output">
             {

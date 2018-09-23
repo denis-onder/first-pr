@@ -12,6 +12,13 @@
   left: 100px;
   font-family: 'Montserrat'; }
 
+.Dashboard #menuBtn {
+  color: #F0F3BD;
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  cursor: pointer; }
+
 #output {
   display: none;
   position: absolute;
