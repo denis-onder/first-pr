@@ -18,6 +18,8 @@
 
 * `npm run client - Starts the React Development Server.`
 
+* `npm run sass - Starts the node-sass compiler in watch mode.`
+
 * `npm run dev - Starts both the Node and React server at the same time.`
 
 * `npm run dev-sass - Does the same thing as the dev script, except that this script runs the node-sass compiler in watch mode as well.`
