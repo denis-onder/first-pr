@@ -38,7 +38,10 @@
 #output div {
   background-color: #028090;
   padding: 1em 2em;
-  margin-bottom: 10px; }
+  margin-bottom: 7.5px;
+  -webkit-box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75); }
 
 #output a {
   text-decoration: none;
