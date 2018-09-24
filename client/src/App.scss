@@ -6,6 +6,7 @@ $font-color: #F0F3BD;
 $primary-color: #05668D;
 $secondary-color: #028090;
 $third-color: #00A896;
+$reddit: #FF4500;
 
 // Dasboard Styles
 .Dashboard {
@@ -116,7 +117,7 @@ $third-color: #00A896;
       i {
         margin-left: 10px;
         font-size: 24px;
-        color: #FF4500;
+        color: $reddit;
         font-weight: normal;
       }
       p {

@@ -26,7 +26,7 @@ class Menu extends Component {
           <a href="https://www.reddit.com/r/learnjavascript/" target="_blank" rel="noopener noreferrer">
             <li className="listItem">
               <i className="fab fa-reddit"></i>
-              <p>Learn Javascript</p>
+              <p>Learn JavaScript</p>
             </li>
           </a>
           <a href="https://www.reddit.com/r/learnpython/" target="_blank" rel="noopener noreferrer">
