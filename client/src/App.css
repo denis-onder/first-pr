@@ -127,6 +127,10 @@
 .Menu ul .listItem p {
   margin-left: 10px; }
 
+.Menu ul .listItem:hover {
+  transition: 0.2s;
+  background-color: #029fb3; }
+
 .openMenu {
   animation-name: openMenu;
   animation-duration: 0.2s;
