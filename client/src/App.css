@@ -66,14 +66,49 @@
   -webkit-box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   box-shadow: -3px 0px 33px -6px rgba(0, 0, 0, 0.75);
-  background-color: #028090; }
+  background-color: #028090;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .Menu #closeMenuBtn {
+  position: absolute;
+  top: 25px;
+  right: 50px;
   opacity: 0;
   float: right;
-  margin: 25px 50px 0 0;
   color: #F0F3BD;
   cursor: pointer; }
+
+.Menu ul {
+  list-style-type: none;
+  width: 400px;
+  position: relative;
+  left: -40px;
+  font-family: 'Montserrat';
+  font-weight: bold; }
+
+.Menu ul #menuTitle {
+  margin-left: 10px; }
+
+.Menu ul a {
+  color: #F0F3BD;
+  text-decoration: none; }
+
+.Menu ul .listItem {
+  background-color: #0296a9;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px; }
+
+.Menu ul .listItem i {
+  margin-left: 10px;
+  font-size: 24px;
+  color: #FF4500;
+  font-weight: normal; }
+
+.Menu ul .listItem p {
+  margin-left: 10px; }
 
 .openMenu {
   animation-name: openMenu;

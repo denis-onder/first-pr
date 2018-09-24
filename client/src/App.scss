@@ -82,12 +82,47 @@ $third-color: #00A896;
   -moz-box-shadow: -3px 0px 33px -6px rgba(0,0,0,0.75);
   box-shadow: -3px 0px 33px -6px rgba(0,0,0,0.75);
   background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   #closeMenuBtn {
+    position: absolute;
+    top: 25px;
+    right: 50px;
     opacity: 0;
     float: right;
-    margin: 25px 50px 0 0;
     color: $font-color;
     cursor: pointer;
+  }
+  ul {
+    list-style-type: none;
+    width: 400px;
+    position: relative;
+    left: -40px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    #menuTitle {
+      margin-left: 10px;
+    }
+    a {
+      color: $font-color;
+      text-decoration: none;
+    }
+    .listItem {
+      background-color: lighten($secondary-color, 5%);
+      display: flex;
+      align-items: center;
+      margin-bottom: 1px;
+      i {
+        margin-left: 10px;
+        font-size: 24px;
+        color: #FF4500;
+        font-weight: normal;
+      }
+      p {
+        margin-left: 10px;
+      }
+    }
   }
 }
 
