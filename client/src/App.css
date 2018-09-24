@@ -20,6 +20,10 @@
   right: 50px;
   cursor: pointer; }
 
+.Dashboard #menuBtn:hover {
+  transition: 0.2s;
+  color: white; }
+
 #output {
   visibility: hidden;
   position: absolute;
@@ -58,6 +62,10 @@
   cursor: pointer;
   margin-bottom: 25px; }
 
+.Sidebar i:hover {
+  transition: 0.2s;
+  color: white; }
+
 .Menu {
   position: fixed;
   right: 0;
@@ -81,6 +89,10 @@
   color: #F0F3BD;
   cursor: pointer; }
 
+.Menu #closeMenuBtn:hover {
+  transition: 0.2s;
+  color: white; }
+
 .Menu ul {
   list-style-type: none;
   width: 400px;
@@ -95,6 +107,10 @@
 .Menu ul a {
   color: #F0F3BD;
   text-decoration: none; }
+
+.Menu ul a:hover {
+  transition: 0.2s;
+  color: white; }
 
 .Menu ul .listItem {
   background-color: #0296a9;
@@ -155,6 +171,10 @@
   right: 25px;
   font-size: 22px;
   cursor: pointer; }
+
+.Modal .modalBody .modalHead #closeBtn:hover {
+  transition: 0.2s;
+  color: white; }
 
 .Modal .modalInputs {
   display: flex;
@@ -258,6 +278,10 @@
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+
+.lds-ripple div:hover {
+  transition: 0.2s;
+  color: white; }
 
 .lds-ripple:nth-child(2) {
   animation-delay: -0.5s; }

@@ -28,6 +28,10 @@ $reddit: #FF4500;
     top: 25px;
     right: 50px;
     cursor: pointer;
+    &:hover {
+      transition: 0.2s;
+      color: white;
+    }
   }
 }
 
@@ -70,6 +74,10 @@ $reddit: #FF4500;
   i {
     cursor: pointer;
     margin-bottom: 25px;
+    &:hover {
+      transition: 0.2s;
+      color: white;
+    }
   }
 }
 
@@ -95,6 +103,10 @@ $reddit: #FF4500;
     float: right;
     color: $font-color;
     cursor: pointer;
+    &:hover {
+      transition: 0.2s;
+      color: white;
+    }
   }
   ul {
     list-style-type: none;
@@ -109,6 +121,10 @@ $reddit: #FF4500;
     a {
       color: $font-color;
       text-decoration: none;
+      &:hover {
+        transition: 0.2s;
+        color: white;
+      }
     }
     .listItem {
       background-color: lighten($secondary-color, 5%);
@@ -174,6 +190,10 @@ $reddit: #FF4500;
         right: 25px;
         font-size: 22px;
         cursor: pointer;
+        &:hover {
+          transition: 0.2s;
+          color: white;
+        }
       }
     }
   }
@@ -291,6 +311,10 @@ $reddit: #FF4500;
     opacity: 1;
     border-radius: 50%;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    &:hover {
+      transition: 0.2s;
+      color: white;
+    }
   }
   &:nth-child(2) {
     animation-delay: -0.5s;
