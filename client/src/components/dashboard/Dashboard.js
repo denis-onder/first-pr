@@ -24,9 +24,19 @@ class Dashboard extends Component {
 
   refetchIssues() {
     this.setState({issues: []});
+    document.getElementById('output').style.display = 'none';
+    document.getElementById('title').style.display = 'none';
+    document.getElementById('menuBtn').style.display = 'none';
+    document.getElementById('Spinner').style.display = 'flex';
     axios.get('/api/issues')
       .then(res => this.setState({ issues: res.data }))
       .catch(err => console.log(err));
+    setTimeout(() => {
+      document.getElementById('Spinner').style.display = 'none';
+      document.getElementById('output').style.display = 'block';
+      document.getElementById('title').style.display = 'block';
+      document.getElementById('menuBtn').style.display = 'block';
+    }, 3000)
   }
   
   openModal() {
@@ -54,6 +64,7 @@ class Dashboard extends Component {
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('title').style.display = 'block';
       document.getElementById('output').style.display = 'block';
+      document.getElementById('Spinner').classList = 'spinnerBackground';
     }, 3000)
   }
 

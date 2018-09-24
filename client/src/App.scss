@@ -296,6 +296,11 @@ $reddit: #FF4500;
   }
 }
 
+.spinnerBackground {
+  z-index: 99 !important;
+  background-color: transparent !important;
+}
+
 // Animations
 @keyframes modalopen {
   from {
