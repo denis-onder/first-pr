@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Sidebar from '../layout/Sidebar';
+import React, { Component } from 'react';
 import Menu from '../layout/Menu';
 import Modal from './../modal/Modal';
 import axios from 'axios';
@@ -13,12 +12,26 @@ class Dashboard extends Component {
     }
     this.closeModalFromOutside = this.closeModalFromOutside.bind(this);
     this.fetchIssues = this.fetchIssues.bind(this);
+    this.refetchIssues = this.refetchIssues.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
   fetchIssues() {
     axios.get('/api/issues')
       .then(res => this.setState({ issues: res.data }))
       .catch(err => console.log(err));
+  }
+
+  refetchIssues() {
+    this.setState({issues: []});
+    axios.get('/api/issues')
+      .then(res => this.setState({ issues: res.data }))
+      .catch(err => console.log(err));
+  }
+  
+  openModal() {
+    const modal = document.getElementById('Modal');
+    modal.style.display = 'block';
   }
 
   closeModalFromOutside(e) {
@@ -45,8 +58,8 @@ class Dashboard extends Component {
   }
 
   render() {
-      return (
-        <div className="Dashboard" onClick={this.closeModalFromOutside}>
+    return (
+      <div className="Dashboard" onClick={this.closeModalFromOutside}>
         <div className="wrapper">
           <div id="Spinner">
               <div className="lds-ripple">
@@ -54,24 +67,36 @@ class Dashboard extends Component {
                 <div></div>
               </div>
             </div>
-            <Sidebar />
+            <div className="Sidebar">
+              <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.openModal}></i>
+              <i className="fas fa-sync-alt fa-2x" onClick={this.refetchIssues}></i>
+              <i className="fas fa-info-circle fa-2x"></i>
+            </div>
             <Menu />
             <h1 id="title">FirstPR</h1>
             <i className="fas fa-bars fa-2x" id="menuBtn" onClick={this.openMenu}></i>
             <Modal />
             <div id="output">
-              {
-                this.state.issues.map(issue => (
-                  <div key={issue._id} id={issue._id}>
-                    <p>{issue.user}</p>
+            {
+              this.state.issues.map(issue =>
+                <div key={issue._id} id={issue._id}>
+                  <p>{issue.user}</p>
+                {
+                  issue.link.includes('https://') 
+                  ? 
                     <a href={issue.link} target="_blank">{issue.link}</a>
-                  </div>
-                ))
-              }
+                  :
+                    <a href={`https://${issue.link}`} target="_blank">{`https://${issue.link}`}</a>
+                }
+                </div>
+              )
+            }
             </div>
           </div>
         </div>
-      )
+    )
   }
 }
+
+
 export default Dashboard;
