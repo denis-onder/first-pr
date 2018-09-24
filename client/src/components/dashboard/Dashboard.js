@@ -84,9 +84,9 @@ class Dashboard extends Component {
                 {
                   issue.link.includes('https://') 
                   ? 
-                    <a href={issue.link} target="_blank">{issue.link}</a>
+                    <a href={issue.link} target="_blank" rel="noopener noreferrer">{issue.link}</a>
                   :
-                    <a href={`https://${issue.link}`} target="_blank">{`https://${issue.link}`}</a>
+                    <a href={`https://${issue.link}`} target="_blank" rel="noopener noreferrer">{`https://${issue.link}`}</a>
                 }
                 </div>
               )
