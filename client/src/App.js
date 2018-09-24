@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './components/dashboard/Dashboard';
+import About from './components/about/About';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Dashboard} />
+          <Route exact path="/about" component={About} />
         </div>
       </Router>
     );

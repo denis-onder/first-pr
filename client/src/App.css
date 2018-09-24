@@ -49,6 +49,7 @@
 
 .Sidebar {
   position: fixed;
+  left: 0;
   width: 70px;
   height: 100%;
   background-color: #028090;
@@ -63,7 +64,8 @@
 
 .Sidebar i {
   cursor: pointer;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  color: #F0F3BD; }
 
 .Sidebar i:hover {
   transition: 0.2s;

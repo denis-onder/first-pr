@@ -63,6 +63,7 @@ $reddit: #FF4500;
 // Sidebar Styles
 .Sidebar {
   position: fixed;
+  left: 0;
   width: 70px;
   height: 100%;
   background-color: $secondary-color;
@@ -77,6 +78,7 @@ $reddit: #FF4500;
   i {
     cursor: pointer;
     margin-bottom: 25px;
+    color: $font-color;
     &:hover {
       transition: 0.2s;
       color: white;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Menu from '../layout/Menu';
 import Modal from './../modal/Modal';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends Component {
 
@@ -82,7 +83,9 @@ class Dashboard extends Component {
             <div className="Sidebar">
               <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.openModal}></i>
               <i className="fas fa-sync-alt fa-2x" onClick={this.refetchIssues}></i>
-              <i className="fas fa-info-circle fa-2x"></i>
+              <Link to="/about">
+                <i className="fas fa-info-circle fa-2x"></i>
+              </Link>
             </div>
             <Menu />
             <h1 id="title">FirstPR</h1>
