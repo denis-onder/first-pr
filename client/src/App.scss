@@ -22,6 +22,7 @@ $reddit: #FF4500;
     font-family: 'Montserrat';
   }
   #menuBtn {
+    display: none;
     color: $font-color;
     position: fixed;
     top: 25px;
@@ -32,7 +33,7 @@ $reddit: #FF4500;
 
 // Output Styles
 #output {
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 50px;
   right: 100px;

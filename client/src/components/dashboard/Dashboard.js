@@ -62,8 +62,9 @@ class Dashboard extends Component {
     this.fetchIssues();
     setTimeout(() => {
       document.getElementById('Spinner').style.display = 'none';
+      document.getElementById('output').style.visibility = 'visible';
       document.getElementById('title').style.display = 'block';
-      document.getElementById('output').style.display = 'block';
+      document.getElementById('menuBtn').style.display = 'block';
       document.getElementById('Spinner').classList = 'spinnerBackground';
     }, 3000)
   }

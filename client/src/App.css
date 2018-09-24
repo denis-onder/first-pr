@@ -13,6 +13,7 @@
   font-family: 'Montserrat'; }
 
 .Dashboard #menuBtn {
+  display: none;
   color: #F0F3BD;
   position: fixed;
   top: 25px;
@@ -20,7 +21,7 @@
   cursor: pointer; }
 
 #output {
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 50px;
   right: 100px;
