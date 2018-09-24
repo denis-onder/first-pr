@@ -146,8 +146,10 @@ $reddit: #FF4500;
         margin-left: 10px;
       }
       &:hover {
-        transition: 0.2s;
+        transition: 0.08s;
         background-color: lighten($secondary-color, 7%);
+        margin-top: 2px;
+        margin-bottom: 2px;
       }
     }
   }

@@ -133,8 +133,10 @@
   margin-left: 10px; }
 
 .Menu ul .listItem:hover {
-  transition: 0.2s;
-  background-color: #029fb3; }
+  transition: 0.08s;
+  background-color: #029fb3;
+  margin-top: 2px;
+  margin-bottom: 2px; }
 
 .openMenu {
   animation-name: openMenu;
