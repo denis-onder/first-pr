@@ -18,17 +18,19 @@ class Modal extends Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.onKeyUp = this.onKeyUp.bind(this);
-    this.checkUsername = this.checkUsername.bind(this);
   }
 
   onSubmit() {
     const userInput = this.state.user;
     const linkInput = this.state.link;
     let errors = {};
+    this.setState({
+      user: '',
+      link: ''
+    });
     if (Validator.isEmpty(userInput)) {
       errors.user = 'User Field must be filled out.';
     }
-    this.checkUsername(userInput);
     if (Validator.isEmpty(linkInput)) {
       errors.link = 'URL Field must be filled out.';
     }
@@ -46,16 +48,13 @@ class Modal extends Component {
         }
       });
     } else {
+      this.clearErrors();
       const newIssue = {
         user: userInput,
         link: linkInput
       };
       axios.post('/api/issues', newIssue)
         .catch(err => console.log(err));
-      this.setState({
-        user: '',
-        link: ''
-      })
       document.getElementById('userInput').value = '';
       document.getElementById('urlInput').value = '';
       this.closeModal();
@@ -79,15 +78,11 @@ class Modal extends Component {
     modal.style.display = 'none';
   }
 
-  checkUsername(user) {
-    fetch(`https://api.github.com/users/${user}`)
-      .then(res => res.json())
-      .then(data => {
-        if(data.message === 'Not Found') {
-          this.setState({errors: {user: 'User does not exist'}});
-        }
-      })
-      .catch(err => console.log(err));
+  clearErrors() {
+    const userError = document.getElementById('userError');
+    const linkError = document.getElementById('linkError');
+    userError.style.display = 'none';
+    linkError.style.display = 'none';
   }
 
   render() {
