@@ -138,7 +138,7 @@ $reddit: #FF4500;
       i {
         margin-left: 10px;
         font-size: 24px;
-        color: $reddit;
+        color: $reddit !important;
         font-weight: normal;
       }
       p {
@@ -332,8 +332,8 @@ $reddit: #FF4500;
 }
 
 .spinnerBackground {
-  z-index: 99 !important;
-  background-color: transparent !important;
+  z-index: 99;
+  background-color: transparent;
 }
 
 // Containers

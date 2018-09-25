@@ -125,7 +125,7 @@
 .Menu ul .listItem i {
   margin-left: 10px;
   font-size: 24px;
-  color: #FF4500;
+  color: #FF4500 !important;
   font-weight: normal; }
 
 .Menu ul .listItem p {
@@ -297,8 +297,8 @@
   animation-delay: -0.5s; }
 
 .spinnerBackground {
-  z-index: 99 !important;
-  background-color: transparent !important; }
+  z-index: 99;
+  background-color: transparent; }
 
 .text-container {
   position: absolute;
