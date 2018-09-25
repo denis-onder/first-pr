@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
           <i className="fas fa-question-circle fa-2x"></i>
         </Link>
         <Link to="/tos">
-          <i className="fas fa-user-circle fa-2x"></i>
+          <i className="fas fa-info-circle fa-2x"></i>
         </Link>
       </div>
     )

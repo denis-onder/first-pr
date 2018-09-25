@@ -37,7 +37,7 @@ class Dashboard extends Component {
       document.getElementById('output').style.display = 'block';
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
-    }, 3000)
+    }, 2750)
   }
   
   openModal() {
@@ -67,7 +67,7 @@ class Dashboard extends Component {
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
       document.getElementById('Spinner').classList = 'spinnerBackground';
-    }, 3000)
+    }, 2750)
   }
 
   render() {
@@ -84,7 +84,7 @@ class Dashboard extends Component {
               <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.openModal}></i>
               <i className="fas fa-sync-alt fa-2x" onClick={this.refetchIssues}></i>
               <Link to="/about">
-                <i className="fas fa-info-circle fa-2x"></i>
+                <i className="fas fa-question-circle fa-2x"></i>
               </Link>
             </div>
             <Menu />
