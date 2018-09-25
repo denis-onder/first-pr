@@ -34,7 +34,7 @@ class Dashboard extends Component {
       .catch(err => console.log(err));
     setTimeout(() => {
       document.getElementById('Spinner').style.display = 'none';
-      document.getElementById('output').style.display = 'block';
+      document.getElementById('output').style.display = 'grid';
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
     }, 2750)
