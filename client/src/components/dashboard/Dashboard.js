@@ -88,7 +88,10 @@ class Dashboard extends Component {
               </Link>
             </div>
             <Menu />
-            <h1 id="title">FirstPR</h1>
+            <div id="title">
+              <h1>FirstPR</h1>
+              <p><b>Your First Pull Request.</b></p>
+            </div>
             <i className="fas fa-bars fa-2x" id="menuBtn" onClick={this.openMenu}></i>
             <Modal />
             <div id="output">

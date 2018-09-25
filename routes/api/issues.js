@@ -5,7 +5,7 @@ const Issue = require('../../models/Issue');
 
 // Get all issues
 router.get('/', (req, res) => {
-  Issue.find().limit(10).sort({date: -1})
+  Issue.find().limit(15).sort({date: -1})
     .then(issues => res.json(issues))
     .catch(err => res.json(err));
 });
