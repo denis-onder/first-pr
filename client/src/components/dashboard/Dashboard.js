@@ -73,6 +73,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="Dashboard" onClick={this.closeModalFromOutside}>
+        <Menu />
         <div className="wrapper">
           <div id="Spinner">
               <div className="lds-ripple">
@@ -87,7 +88,6 @@ class Dashboard extends Component {
                 <i className="fas fa-question-circle fa-2x"></i>
               </Link>
             </div>
-            <Menu />
             <div id="title">
               <h1>FirstPR</h1>
               <p><b>Your First Pull Request.</b></p>
