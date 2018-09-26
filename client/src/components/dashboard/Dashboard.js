@@ -97,15 +97,29 @@ class Dashboard extends Component {
             <div id="output">
             {
               this.state.issues.map(issue =>
-                <div key={issue._id} id={issue._id}>
-                  <p>{issue.user}</p>
-                  <p>{issue.description}</p>
+                <div className="outputDiv" key={issue._id} id={issue._id}>
+                  <div className="outputGroup">
+                    <i className="fas fa-user"></i>
+                    <p>{issue.user}</p>
+                  </div>
+                  <br/>
+                  <div className="outputGroup">
+                    <i className="fas fa-pen"></i>
+                    <p>{issue.description}</p>
+                  </div>
+                  <br/>
                 {
                   issue.link.includes('https://') 
                   ? 
+                  <div className="outputGroup">
+                    <i className="fas fa-link"></i>
                     <a href={issue.link} target="_blank" rel="noopener noreferrer">{issue.link}</a>
+                  </div>
                   :
+                  <div className="outputGroup">
+                    <i className="fas fa-link"></i>
                     <a href={`https://${issue.link}`} target="_blank" rel="noopener noreferrer">{`https://${issue.link}`}</a>
+                  </div>
                 }
                 </div>
               )
