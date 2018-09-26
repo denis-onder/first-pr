@@ -157,6 +157,11 @@
   animation-duration: 0.2s;
   animation-fill-mode: forwards; }
 
+.openMenuResponsive {
+  animation-name: openMenuResponsive;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards; }
+
 .displayArrow {
   animation-name: displayArrow;
   animation-duration: 0.2s;
@@ -347,8 +352,72 @@
   100% {
     width: 370px; } }
 
+@keyframes openMenuResponsive {
+  0% {
+    width: 0%; }
+  100% {
+    width: 210px; } }
+
 @keyframes displayArrow {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@media (max-width: 1730px) {
+  #output {
+    grid-template-columns: 1fr 1fr !important; } }
+
+@media (max-width: 1190px) {
+  #output {
+    grid-template-columns: 1fr !important; }
+  #menuBtn {
+    right: 25px !important; }
+  #closeMenuBtn {
+    right: 25px !important; } }
+
+@media (max-width: 760px) {
+  #menuBtn {
+    top: 15px !important;
+    left: 20px !important;
+    z-index: 999 !important; } }
+
+@media (max-width: 660px) {
+  .outputDiv {
+    padding: 0.25em 0.5em !important;
+    width: 400px !important; }
+  .Sidebar {
+    width: 45px !important; }
+  .Sidebar i {
+    font-size: 22px !important; }
+  #title {
+    top: 10px !important;
+    left: 60px !important; }
+  #title h1 {
+    margin: 0 !important; }
+  #title p {
+    margin: 0 !important; }
+  #closeMenuBtn {
+    top: 15px !important;
+    right: 15px !important;
+    font-size: 22px !important; }
+  #output {
+    left: 60px !important;
+    top: 80px !important; }
+  #menuBtn {
+    left: 13px !important;
+    font-size: 22px !important; }
+  #menu p {
+    font-size: 14px !important; } }
+
+@media (max-width: 510px) {
+  .outputDiv {
+    width: 350px; }
+  .outputDiv p {
+    font-size: 14px !important; }
+  .outputDiv a {
+    font-size: 14px !important; } }
+
+@media (max-width: 460px) {
+  .outputDiv {
+    width: 300px !important; } }

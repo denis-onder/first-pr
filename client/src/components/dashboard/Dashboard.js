@@ -55,8 +55,13 @@ class Dashboard extends Component {
   openMenu() {
     const menu = document.getElementById('menu');
     const arrow = document.getElementById('closeMenuBtn');
-    menu.classList.toggle('openMenu');
-    arrow.classList.toggle('displayArrow');
+    if(window.innerWidth > 510) {
+      menu.classList.toggle('openMenu');
+      arrow.classList.toggle('displayArrow');
+    } else {
+      menu.classList.toggle('openMenuResponsive');
+      arrow.classList.toggle('displayArrow');
+    }
   }
 
   componentDidMount() {
