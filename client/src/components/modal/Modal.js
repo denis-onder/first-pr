@@ -100,7 +100,7 @@ class Modal extends Component {
   render() {
     return (
       <div className="Modal" id="Modal" onKeyUp={this.onKeyUp}>
-        <div className="modalBody">
+        <div className="modalBody" id="modalBody">
           <div className="modalHead">
             <h3>Add a new issue!</h3>
             <i className="fas fa-times-circle" id="closeBtn" onClick={this.closeModal}></i>

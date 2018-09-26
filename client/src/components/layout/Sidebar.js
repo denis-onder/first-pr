@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Sidebar extends Component {
   render() {
     return (
-      <div className="Sidebar">
+      <div className="Sidebar" id="sidebar">
         <Link to="/">
           <i className="fas fa-arrow-circle-left fa-2x"></i>
         </Link>

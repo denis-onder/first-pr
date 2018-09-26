@@ -480,6 +480,10 @@ $reddit: #FF4500;
     left: 13px !important;
     font-size: 22px !important;
   }
+  .nightMode {
+    left: 13px !important;
+    font-size: 22px !important;
+  }
   #menu {
     p {
       font-size: 14px !important;
@@ -502,5 +506,52 @@ $reddit: #FF4500;
 @media (max-width: 460px) {
   .outputDiv {
     width: 315px !important;
+  }
+}
+
+// Night Mode
+.nightMode {
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+  color: $font-color;
+  &:hover {
+    transition: 0.2s;
+    color: #fff;
+  }
+}
+
+#nightModeBtn {
+  display: none;
+}
+
+.nightModePrimary {
+  transition: 0.2s !important;
+  background-color: #333 !important;
+}
+
+.nightModeSecondary {
+  transition: 0.2s !important;
+  background-color: #555 !important;
+}
+
+.nightModeThird {
+  transition: 0.2s !important;
+  background-color: #777 !important;
+}
+
+.nightModeListItems{ 
+  transition: 0.2s !important;
+  background-color: lighten(#555, 5%) !important;
+}
+
+.nightModeModal {
+  transition: 0.2s !important;
+  background-color: #555 !important;
+  #submitBtn {
+    transition: 0.2s !important;
+    background-color: lighten(#333, 3%) !important;
   }
 }

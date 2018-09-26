@@ -29,14 +29,17 @@ class Dashboard extends Component {
     document.getElementById('title').style.display = 'none';
     document.getElementById('menuBtn').style.display = 'none';
     document.getElementById('Spinner').style.display = 'flex';
+    document.getElementById('nightModeBtn').style.display = 'none';
     axios.get('/api/issues')
-      .then(res => this.setState({ issues: res.data }))
-      .catch(err => console.log(err));
+    .then(res => this.setState({ issues: res.data }))
+    .catch(err => console.log(err));
     setTimeout(() => {
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('output').style.display = 'grid';
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
+      document.getElementById('nightModeBtn').style.display = 'block';
+      this.checkNightMode();
     }, 2750)
   }
   
@@ -64,6 +67,65 @@ class Dashboard extends Component {
     }
   }
 
+  nightMode() {
+    const nightMode = true;
+    localStorage.setItem('nightMode', nightMode);
+    const sidebar = document.getElementById('sidebar');
+    const dashboard = document.getElementById('dashboard');
+    const menu = document.getElementById('menu');
+    const outputDivs = document.querySelectorAll('.outputDiv');
+    const menuItems = document.querySelectorAll('.listItem');
+    const modal = document.getElementById('modalBody');
+    const body = document.body;
+    modal.classList.add('nightModeModal');
+    body.classList.add('nightModePrimary');
+    sidebar.classList.add('nightModeSecondary'); 
+    dashboard.classList.add('nightModePrimary');
+    menu.classList.add('nightModeSecondary');
+    for (let i = 0; i < outputDivs.length; i++) {
+      outputDivs[i].classList.add('nightModeSecondary');
+    }
+    for (let i = 0; i < menuItems.length; i++) {
+      menuItems[i].classList.add('nightModeListItems');
+    }
+    const nightModeBtn = document.getElementById('nightModeBtn');
+    nightModeBtn.style.display = 'none';
+  }
+
+  checkNightMode() {
+    if(localStorage.getItem('nightMode')) {
+      this.nightMode();
+    }
+    const nightModeBtn = document.getElementById('nightModeBtn');
+    nightModeBtn.style.display = 'block';
+  }
+
+  clearNightMode() {
+    if(localStorage.getItem('nightMode')) {
+      localStorage.removeItem('nightMode');
+      const sidebar = document.getElementById('sidebar');
+      const dashboard = document.getElementById('dashboard');
+      const menu = document.getElementById('menu');
+      const outputDivs = document.querySelectorAll('.outputDiv');
+      const menuItems = document.querySelectorAll('.listItem');
+      const modal = document.getElementById('modalBody');
+      const body = document.body;
+      body.classList.remove('nightModePrimary');
+      modal.classList.remove('nightModeModal');
+      sidebar.classList.remove('nightModeSecondary'); 
+      dashboard.classList.remove('nightModePrimary');
+      menu.classList.remove('nightModeSecondary');
+      for (let i = 0; i < outputDivs.length; i++) {
+        outputDivs[i].classList.remove('nightModeSecondary');
+      }
+      for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].classList.remove('nightModeListItems');
+      }
+      const nightModeBtn = document.getElementById('nightModeBtn');
+      nightModeBtn.style.display = 'none';
+    }
+  }
+
   componentDidMount() {
     this.fetchIssues();
     setTimeout(() => {
@@ -71,13 +133,15 @@ class Dashboard extends Component {
       document.getElementById('output').style.visibility = 'visible';
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
+      document.getElementById('nightModeBtn').style.display = 'block';
       document.getElementById('Spinner').classList = 'spinnerBackground';
+      this.checkNightMode();
     }, 2750)
   }
 
   render() {
     return (
-      <div className="Dashboard" onClick={this.closeModalFromOutside}>
+      <div className="Dashboard" id="dashboard" onClick={this.closeModalFromOutside}>
         <Menu />
         <div className="wrapper">
           <div id="Spinner">
@@ -86,7 +150,7 @@ class Dashboard extends Component {
                 <div></div>
               </div>
             </div>
-            <div className="Sidebar">
+            <div className="Sidebar" id="sidebar">
               <i className="fas fa-plus-circle fa-2x" id="addBtn" ref={this.addBtn} onClick={this.openModal}></i>
               <i className="fas fa-sync-alt fa-2x" onClick={this.refetchIssues}></i>
               <Link to="/about">
@@ -131,6 +195,13 @@ class Dashboard extends Component {
             }
             </div>
           </div>
+          {
+            localStorage.getItem('nightMode') 
+            ? 
+            <i id="nightModeBtn" className="nightMode fas fa-sun fa-2x" onClick={this.clearNightMode}></i> 
+            : 
+            <i id="nightModeBtn" className="nightMode fas fa-moon fa-2x" onClick={this.nightMode}></i>
+          }
         </div>
     )
   }
