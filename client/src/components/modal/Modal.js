@@ -9,9 +9,11 @@ class Modal extends Component {
     this.state = {
         user: '',
         link: '',
+        description: '',
         errors: {
           user: '',
-          link: ''
+          link: '',
+          description: '',
         }
     }
     this.onChange = this.onChange.bind(this);
@@ -23,13 +25,18 @@ class Modal extends Component {
   onSubmit() {
     const userInput = this.state.user;
     const linkInput = this.state.link;
+    const descriptionInput = this.state.description;
     let errors = {};
     this.setState({
       user: '',
-      link: ''
+      link: '',
+      description: ''
     });
     if (Validator.isEmpty(userInput)) {
       errors.user = 'User Field must be filled out.';
+    }
+    if (Validator.isEmpty(descriptionInput)) {
+      errors.description = 'Description Field must be filled out.';
     }
     if (Validator.isEmpty(linkInput)) {
       errors.link = 'URL Field must be filled out.';
@@ -40,23 +47,26 @@ class Modal extends Component {
     if (!linkInput.includes('github')) {
       errors.link = 'The Link must be a valid GitHub URL.';
     }
-    if (errors.user || errors.link) {
+    if (errors.user || errors.link || errors.description) {
       this.setState({
         errors: {
           user: errors.user,
-          link: errors.link
+          link: errors.link,
+          description: errors.description
         }
       });
     } else {
       this.clearErrors();
       const newIssue = {
         user: userInput,
-        link: linkInput
+        link: linkInput,
+        description: descriptionInput
       };
       axios.post('/api/issues', newIssue)
         .catch(err => console.log(err));
       document.getElementById('userInput').value = '';
       document.getElementById('urlInput').value = '';
+      document.getElementById('descriptionInput').value = '';
       this.closeModal();
     }
   }
@@ -81,8 +91,10 @@ class Modal extends Component {
   clearErrors() {
     const userError = document.getElementById('userError');
     const linkError = document.getElementById('linkError');
+    const descriptionError = document.getElementById('descriptionError');
     userError.style.display = 'none';
     linkError.style.display = 'none';
+    descriptionError.style.display = 'none';
   }
 
   render() {
@@ -94,16 +106,18 @@ class Modal extends Component {
             <i className="fas fa-times-circle" id="closeBtn" onClick={this.closeModal}></i>
           </div>
             <div className="modalInputs">
-              <input type="text" placeholder="GitHub Username:" id="userInput" name="user" ref={this.userInput} value={this.state.user} onChange={this.onChange} />
+              <input type="text" className="inputs" placeholder="GitHub Username:" id="userInput" name="user" ref={this.userInput} value={this.state.user} onChange={this.onChange} />
                 {
-                  this.state.errors.user ? <p id="userError">{this.state.errors.user}</p> : <p id="userError"></p>
+                  this.state.errors.user ? <p className="errors" id="userError">{this.state.errors.user}</p> : <p id="userError"></p>
                 }
-              <br/>
-              <input type="text" placeholder="Repository URL:" id="urlInput" name="link" ref={this.linkInput} value={this.state.link} onChange={this.onChange} />
+              <input type="text" className="inputs" placeholder="Description:" id="descriptionInput" name="description" ref={this.descriptionInput} value={this.state.description} onChange={this.onChange} />
                 {
-                  this.state.errors.link ? <p id="linkError">{this.state.errors.link}</p> : <p id="linkError"></p>
+                  this.state.errors.description ? <p className="errors" id="descriptionError">{this.state.errors.description}</p> : <p id="descriptionError"></p>
                 }
-              <br/>
+              <input type="text" className="inputs" placeholder="Repository URL:" id="urlInput" name="link" ref={this.linkInput} value={this.state.link} onChange={this.onChange} />
+                {
+                  this.state.errors.link ? <p className="errors" id="linkError">{this.state.errors.link}</p> : <p id="linkError"></p>
+                }
               <button id="submitBtn" onClick={this.onSubmit}>Submit!</button>
               <br/>
             </div>

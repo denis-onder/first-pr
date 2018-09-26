@@ -229,9 +229,7 @@ $reddit: #FF4500;
         padding: 1em 3em;
       }
     }
-    #userError,
-    #linkError {
-      padding: 0.5em 0em;
+    .errors {
       color: red;
       font-weight: bold;
     }
@@ -239,7 +237,7 @@ $reddit: #FF4500;
 }
 
 // Inputs and Placeholders
-#userInput, #urlInput {
+.inputs {
   font-family: 'Montserrat';
   text-align: center;
   background: transparent;
@@ -252,51 +250,44 @@ $reddit: #FF4500;
   padding-bottom: 0.75em;
 }
 
-#userInput::placeholder, 
-#urlInput::placeholder {
+.inputs::placeholder {
   text-align: center;
   color: $font-color !important;
   opacity: 1;
 }
 
-#userInput:-ms-input-placeholder, 
-#urlInput:-ms-input-placeholder {
+.inputs:-ms-input-placeholder {
   text-align: center;
   color: $font-color !important;
 }
 
-#userInput::-ms-input-placeholder, 
-#urlInput::-ms-input-placeholder {
+.inputs::-ms-input-placeholder {
   text-align: center;
   color: $font-color !important;
 }
 
-#userInput:focus::-moz-placeholder, 
-#urlInput:focus::-moz-placeholder {
+.inputs:focus::-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important;
 }
 
-#userInput:focus:-moz-placeholder, 
-#urlInput:focus:-moz-placeholder {
+.inputs:focus:-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important;
 }
 
-#userInput:focus::-webkit-input-placeholder, 
-#urlInput:focus::-webkit-input-placeholder {
+.inputs:focus::-webkit-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important;
 }
 
-#userInput:focus::-ms-input-placeholder, 
-#urlInput:focus::-ms-input-placeholder {
+.inputs:focus::-ms-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent $font-color !important;
+  color: transparent$font-color !important;
 }
 
 // Spinner

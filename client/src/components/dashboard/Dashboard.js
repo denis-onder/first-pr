@@ -99,6 +99,7 @@ class Dashboard extends Component {
               this.state.issues.map(issue =>
                 <div key={issue._id} id={issue._id}>
                   <p>{issue.user}</p>
+                  <p>{issue.description}</p>
                 {
                   issue.link.includes('https://') 
                   ? 

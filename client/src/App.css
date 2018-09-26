@@ -209,13 +209,11 @@
   transition: 0.2s;
   padding: 1em 3em; }
 
-.Modal .modalInputs #userError,
-.Modal .modalInputs #linkError {
-  padding: 0.5em 0em;
+.Modal .modalInputs .errors {
   color: red;
   font-weight: bold; }
 
-#userInput, #urlInput {
+.inputs {
   font-family: 'Montserrat';
   text-align: center;
   background: transparent;
@@ -227,42 +225,35 @@
   border-bottom: 1px solid #F0F3BD;
   padding-bottom: 0.75em; }
 
-#userInput::placeholder,
-#urlInput::placeholder {
+.inputs::placeholder {
   text-align: center;
   color: #F0F3BD !important;
   opacity: 1; }
 
-#userInput:-ms-input-placeholder,
-#urlInput:-ms-input-placeholder {
+.inputs:-ms-input-placeholder {
   text-align: center;
   color: #F0F3BD !important; }
 
-#userInput::-ms-input-placeholder,
-#urlInput::-ms-input-placeholder {
+.inputs::-ms-input-placeholder {
   text-align: center;
   color: #F0F3BD !important; }
 
-#userInput:focus::-moz-placeholder,
-#urlInput:focus::-moz-placeholder {
+.inputs:focus::-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important; }
 
-#userInput:focus:-moz-placeholder,
-#urlInput:focus:-moz-placeholder {
+.inputs:focus:-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important; }
 
-#userInput:focus::-webkit-input-placeholder,
-#urlInput:focus::-webkit-input-placeholder {
+.inputs:focus::-webkit-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent !important; }
 
-#userInput:focus::-ms-input-placeholder,
-#urlInput:focus::-ms-input-placeholder {
+.inputs:focus::-ms-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
   color: transparent #F0F3BD !important; }

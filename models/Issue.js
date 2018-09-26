@@ -8,7 +8,11 @@ const IssueSchema = new Schema({
   },
   link: {
     type: String,
-    required: true,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
   },
   date: {
     type: Date,
