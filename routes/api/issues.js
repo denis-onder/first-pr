@@ -14,7 +14,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const newIssue = new Issue({
     user: req.body.user,
-    link: req.body.link
+    link: req.body.link,
+    description: req.body.description
   });
   newIssue.save()
     .then(post => res.json(post))

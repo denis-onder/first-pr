@@ -92,9 +92,9 @@ class Modal extends Component {
     const userError = document.getElementById('userError');
     const linkError = document.getElementById('linkError');
     const descriptionError = document.getElementById('descriptionError');
-    userError.style.display = 'none';
-    linkError.style.display = 'none';
-    descriptionError.style.display = 'none';
+    userError.innerHTML = '';
+    linkError.innerHTML = '';
+    descriptionError.innerHTML = '';
   }
 
   render() {
