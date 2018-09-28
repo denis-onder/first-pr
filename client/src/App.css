@@ -285,7 +285,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99999; }
+  z-index: 99999;
+  overflow: hidden; }
 
 .lds-ripple {
   display: inline-block;
@@ -306,10 +307,6 @@
 
 .lds-ripple:nth-child(2) {
   animation-delay: -0.5s; }
-
-.spinnerBackground {
-  z-index: 99;
-  background-color: transparent; }
 
 .text-container {
   position: absolute;
@@ -411,9 +408,33 @@
     left: 13px !important;
     font-size: 22px !important; }
   #menu p {
-    font-size: 14px !important; } }
+    font-size: 14px !important; }
+  .Modal .modalBody .modalHead h3 {
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding: 10px 0 !important; }
+  .Modal .modalBody .modalHead #closeBtn {
+    font-size: 16px !important;
+    bottom: 30px !important;
+    right: 10px !important; }
+  .Modal .modalBody .modalInputs {
+    font-size: 10px !important; }
+  .Modal .modalBody .modalInputs input {
+    width: 50% !important; }
+  .Modal .modalBody .modalInputs input::placeholder {
+    font-size: 12px !important; }
+  .Modal .modalBody .modalInputs #submitBtn {
+    padding: 0.5em 1em !important;
+    font-weight: normal !important;
+    font-size: 12px !important; } }
 
 @media (max-width: 510px) {
+  #title h1 {
+    font-size: 16px !important; }
+  #title p {
+    font-size: 14px !important; }
+  #output {
+    top: 55px !important; }
   .outputDiv {
     width: 350px; }
   .outputDiv p {
@@ -421,9 +442,50 @@
   .outputDiv a {
     font-size: 14px !important; } }
 
-@media (max-width: 460px) {
+@media (max-width: 490px) {
   .outputDiv {
     width: 315px !important; } }
+
+@media (max-width: 420px) {
+  .outputDiv {
+    width: 275px !important; }
+  .outputDiv .outputGroup p {
+    font-size: 12px !important; }
+  .outputDiv .outputGroup a {
+    font-size: 12px !important; }
+  .outputDiv .outputGroup br {
+    display: none !important; } }
+
+@media (max-width: 390px) {
+  .Modal .modalBody .modalInputs {
+    font-size: 8px !important; }
+  .Modal .modalBody .modalInputs input::placeholder {
+    font-size: 10px !important; } }
+
+@media (max-width: 360px) {
+  .outputDiv {
+    width: 260px !important; }
+  .outputDiv p {
+    font-size: 10px !important; }
+  .outputDiv a {
+    font-size: 10px !important; }
+  .Modal .modalBody .modalHead h3 {
+    font-size: 12px !important;
+    margin: 0 !important;
+    padding: 5px 0 !important; }
+  .Modal .modalBody .modalHead #closeBtn {
+    font-size: 14px !important;
+    bottom: 20px !important;
+    right: 5px !important; }
+  .Modal .modalBody .modalInputs {
+    font-size: 6px !important; }
+  .Modal .modalBody .modalInputs input {
+    width: 40% !important; }
+  .Modal .modalBody .modalInputs input::placeholder {
+    font-size: 8px !important; }
+  .Modal .modalBody .modalInputs #submitBtn {
+    padding: 0.25em 0.75em !important;
+    font-size: 10px !important; } }
 
 .nightMode {
   position: fixed;

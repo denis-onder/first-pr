@@ -25,6 +25,7 @@ class Dashboard extends Component {
 
   refetchIssues() {
     this.setState({issues: []});
+    document.body.style.overflow = 'hidden';
     document.getElementById('output').style.display = 'none';
     document.getElementById('title').style.display = 'none';
     document.getElementById('menuBtn').style.display = 'none';
@@ -34,6 +35,7 @@ class Dashboard extends Component {
     .then(res => this.setState({ issues: res.data }))
     .catch(err => console.log(err));
     setTimeout(() => {
+      document.body.style.overflow = 'auto';
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('output').style.display = 'grid';
       document.getElementById('title').style.display = 'block';
@@ -127,14 +129,15 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    document.body.style.overflow = 'hidden';
     this.fetchIssues();
     setTimeout(() => {
+      document.body.style.overflow = 'auto';
       document.getElementById('Spinner').style.display = 'none';
       document.getElementById('output').style.visibility = 'visible';
       document.getElementById('title').style.display = 'block';
       document.getElementById('menuBtn').style.display = 'block';
       document.getElementById('nightModeBtn').style.display = 'block';
-      document.getElementById('Spinner').classList = 'spinnerBackground';
       this.checkNightMode();
     }, 2750)
   }
@@ -206,6 +209,5 @@ class Dashboard extends Component {
     )
   }
 }
-
 
 export default Dashboard;

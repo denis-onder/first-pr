@@ -321,6 +321,7 @@ $reddit: #FF4500;
   justify-content: center;
   align-items: center;
   z-index: 99999;
+  overflow: hidden;
 }
 
 .lds-ripple {
@@ -342,11 +343,6 @@ $reddit: #FF4500;
   &:nth-child(2) {
     animation-delay: -0.5s;
   }
-}
-
-.spinnerBackground {
-  z-index: 99;
-  background-color: transparent;
 }
 
 // Containers
@@ -489,9 +485,50 @@ $reddit: #FF4500;
       font-size: 14px !important;
     }
   }
+  .Modal {
+    .modalBody {
+      .modalHead {
+        h3 {
+          font-size: 14px !important;
+          margin: 0 !important;
+          padding: 10px 0 !important;
+        }
+        #closeBtn {
+          font-size: 16px !important;
+          bottom: 30px !important;
+          right: 10px !important;
+        }
+      }
+      .modalInputs {
+        font-size: 10px !important;
+        input {
+          width: 50% !important;
+          &::placeholder {
+            font-size: 12px !important;
+          }
+        }
+        #submitBtn {
+          padding: 0.5em 1em !important;
+          font-weight: normal !important;
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
 }
 
 @media(max-width: 510px) {
+  #title {
+    h1 {
+      font-size: 16px !important;
+    }
+    p {
+      font-size: 14px !important;
+    }
+  }
+  #output {
+    top: 55px !important;
+  }
   .outputDiv {
     width: 350px;
     p {
@@ -503,9 +540,82 @@ $reddit: #FF4500;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 490px) {
   .outputDiv {
     width: 315px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .outputDiv {
+    width: 275px !important;
+    .outputGroup {
+      p {
+        font-size: 12px !important;
+      }
+      a {
+        font-size: 12px !important;
+      }
+      br {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .Modal {
+    .modalBody {
+      .modalInputs {
+        font-size: 8px !important;
+        input {
+          &::placeholder {
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .outputDiv {
+    width: 260px !important;
+    p {
+      font-size: 10px !important;
+    }
+    a {
+      font-size: 10px !important;
+    }
+  }
+  .Modal {
+    .modalBody {
+      .modalHead {
+        h3 {
+          font-size: 12px !important;
+          margin: 0 !important;
+          padding: 5px 0 !important;
+        }
+        #closeBtn {
+          font-size: 14px !important;
+          bottom: 20px !important;
+          right: 5px !important;
+        }
+      }
+      .modalInputs {
+        font-size: 6px !important;
+        input {
+          width: 40% !important;
+          &::placeholder {
+            font-size: 8px !important;
+          }
+        }
+        #submitBtn {
+          padding: 0.25em 0.75em !important;
+          font-size: 10px !important;
+        }
+      }
+    }
   }
 }
 
@@ -542,7 +652,7 @@ $reddit: #FF4500;
   background-color: #777 !important;
 }
 
-.nightModeListItems{ 
+.nightModeListItems { 
   transition: 0.2s !important;
   background-color: lighten(#555, 5%) !important;
 }
