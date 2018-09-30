@@ -31,3 +31,9 @@
 * `npm run dev-sass - Does the same thing as the dev script, except that this script runs the node-sass compiler in watch mode as well.`
 
 ---
+
+#### TODO:
+
+> List of todos:
+
+* `Add Night Mode to the info section.`
