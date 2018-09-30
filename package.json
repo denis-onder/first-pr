@@ -4,6 +4,9 @@
   "description": "Service for providing 1st PRs for new developers!",
   "main": "express.js",
   "scripts": {
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install",
+    "install-all": "concurrently \"npm run install-server\" \"npm run install-client\"",
     "server": "node express",
     "nodemon": "nodemon express",
     "client": "npm start --prefix client",
