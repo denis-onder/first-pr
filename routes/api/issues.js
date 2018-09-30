@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
   if (!Validator.isURL(req.body.link)) {
     errors.link = 'The Link must be a valid URL.';
   }
-  if (!req.body.link.includes('github')) {
+  if (!req.body.link.includes('github.com')) {
     errors.link = 'The Link must be a valid GitHub URL.';
   }
   if (errors.user || errors.link || errors.description) {

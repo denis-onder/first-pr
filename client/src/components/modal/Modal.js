@@ -44,7 +44,7 @@ class Modal extends Component {
     if (!Validator.isURL(linkInput)) {
       errors.link = 'The Link must be a valid URL.';
     }
-    if (!linkInput.includes('github')) {
+    if (!linkInput.includes('github.com')) {
       errors.link = 'The Link must be a valid GitHub URL.';
     }
     if (errors.user || errors.link || errors.description) {
