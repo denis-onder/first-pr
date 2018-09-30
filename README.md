@@ -37,3 +37,5 @@
 > List of todos:
 
 * `Add Night Mode to the info section.`
+
+* `Make the info section responsive.`
