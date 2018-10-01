@@ -12,6 +12,8 @@
 
 > These scripts are supposed to be ran from root-level in the file structure.
 
+> NOTE: You are supposed to run the installation scripts first before you are able to run the other scripts.
+
 * `npm run install-server - Installs all the back-end dependencies.`
 
 * `npm run install-client - Installs all the front-end dependencies.`
