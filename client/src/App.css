@@ -504,24 +504,108 @@
 
 .nightModePrimary {
   transition: 0.2s !important;
-  background-color: #333 !important; }
+  background-color: #333 !important;
+  color: #fff !important; }
+
+.nightModePrimary h1,
+.nightModePrimary h2,
+.nightModePrimary h3,
+.nightModePrimary h4,
+.nightModePrimary p,
+.nightModePrimary i,
+.nightModePrimary a {
+  color: #fff !important; }
 
 .nightModeSecondary {
   transition: 0.2s !important;
   background-color: #555 !important; }
 
+.nightModeSecondary h1,
+.nightModeSecondary h2,
+.nightModeSecondary h3,
+.nightModeSecondary h4,
+.nightModeSecondary p,
+.nightModeSecondary i,
+.nightModeSecondary a {
+  color: #fff !important; }
+
 .nightModeThird {
   transition: 0.2s !important;
   background-color: #777 !important; }
+
+.nightModeThird h1,
+.nightModeThird h2,
+.nightModeThird h3,
+.nightModeThird h4,
+.nightModeThird p,
+.nightModeThird i,
+.nightModeThird a {
+  color: #fff !important; }
 
 .nightModeListItems {
   transition: 0.2s !important;
   background-color: #626262 !important; }
 
+.nightModeListItems h1,
+.nightModeListItems h2,
+.nightModeListItems h3,
+.nightModeListItems h4,
+.nightModeListItems p,
+.nightModeListItems i,
+.nightModeListItems a {
+  color: #fff !important; }
+
 .nightModeModal {
   transition: 0.2s !important;
   background-color: #555 !important; }
 
+.nightModeModal h1,
+.nightModeModal h2,
+.nightModeModal h3,
+.nightModeModal h4,
+.nightModeModal p,
+.nightModeModal i,
+.nightModeModal a {
+  color: #fff !important; }
+
 .nightModeModal #submitBtn {
   transition: 0.2s !important;
-  background-color: #3b3b3b !important; }
+  background-color: #3b3b3b !important;
+  color: #fff !important; }
+
+.nightModeModal .inputs {
+  color: #fff !important;
+  border-bottom: 1px solid #fff !important; }
+
+.nightModeModal .inputs::placeholder {
+  text-align: center;
+  color: #fff !important;
+  opacity: 1; }
+
+.nightModeModal .inputs:-ms-input-placeholder {
+  text-align: center;
+  color: #fff !important; }
+
+.nightModeModal .inputs::-ms-input-placeholder {
+  text-align: center;
+  color: #fff !important; }
+
+.nightModeModal .inputs:focus::-moz-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important; }
+
+.nightModeModal .inputs:focus:-moz-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important; }
+
+.nightModeModal .inputs:focus::-webkit-input-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent !important; }
+
+.nightModeModal .inputs:focus::-ms-input-placeholder {
+  text-align: center;
+  transition: 0.1s !important;
+  color: transparent #fff !important; }

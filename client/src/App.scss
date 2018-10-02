@@ -640,28 +640,118 @@ $reddit: #FF4500;
 .nightModePrimary {
   transition: 0.2s !important;
   background-color: #333 !important;
+  color: #fff !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  p, 
+  i, 
+  a {
+    color: #fff !important;
+  }
 }
 
 .nightModeSecondary {
   transition: 0.2s !important;
   background-color: #555 !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  p, 
+  i, 
+  a {
+    color: #fff !important;
+  }
 }
 
 .nightModeThird {
   transition: 0.2s !important;
   background-color: #777 !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    p, 
+    i, 
+    a {
+      color: #fff !important;
+    }
 }
 
 .nightModeListItems { 
   transition: 0.2s !important;
   background-color: lighten(#555, 5%) !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    p, 
+    i, 
+    a {
+      color: #fff !important;
+    }
 }
 
 .nightModeModal {
   transition: 0.2s !important;
   background-color: #555 !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    p, 
+    i, 
+    a {
+      color: #fff !important;
+    }
   #submitBtn {
     transition: 0.2s !important;
     background-color: lighten(#333, 3%) !important;
+    color: #fff !important;
+  }
+  .inputs {
+    color: #fff !important;
+    border-bottom: 1px solid #fff !important;
+  }
+  .inputs::placeholder {
+    text-align: center;
+    color: #fff !important;
+    opacity: 1;
+  }
+  
+  .inputs:-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+  }
+  
+  .inputs::-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+  }
+  
+  .inputs:focus::-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+  }
+  
+  .inputs:focus:-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+  }
+  
+  .inputs:focus::-webkit-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+  }
+  
+  .inputs:focus::-ms-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent #fff !important;
   }
 }
