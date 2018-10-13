@@ -394,6 +394,9 @@
     margin: 0 !important; }
   #title p {
     margin: 0 !important; }
+  .text-container {
+    left: 60px !important;
+    margin-right: 10px !important; }
   #closeMenuBtn {
     top: 15px !important;
     right: 15px !important;
@@ -454,7 +457,9 @@
   .outputDiv .outputGroup a {
     font-size: 12px !important; }
   .outputDiv .outputGroup br {
-    display: none !important; } }
+    display: none !important; }
+  .outputDiv:last-child {
+    margin-bottom: 10px !important; } }
 
 @media (max-width: 390px) {
   .Modal .modalBody .modalInputs {
@@ -464,11 +469,14 @@
 
 @media (max-width: 360px) {
   .outputDiv {
-    width: 260px !important; }
+    width: 250px !important; }
   .outputDiv p {
     font-size: 10px !important; }
   .outputDiv a {
     font-size: 10px !important; }
+  .outputDiv i {
+    font-size: 12px !important;
+    margin-right: 2px !important; }
   .Modal .modalBody .modalHead h3 {
     font-size: 12px !important;
     margin: 0 !important;

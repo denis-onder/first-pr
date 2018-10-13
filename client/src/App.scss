@@ -463,6 +463,10 @@ $reddit: #FF4500;
       margin: 0 !important;
     }
   }
+  .text-container {
+    left: 60px !important;
+    margin-right: 10px !important;
+  }
   #closeMenuBtn {
     top: 15px !important;
     right: 15px !important;
@@ -560,6 +564,9 @@ $reddit: #FF4500;
         display: none !important;
       }
     }
+    &:last-child {
+      margin-bottom: 10px !important;
+    }
   }
 }
 
@@ -580,12 +587,16 @@ $reddit: #FF4500;
 
 @media (max-width: 360px) {
   .outputDiv {
-    width: 260px !important;
+    width: 250px !important;
     p {
       font-size: 10px !important;
     }
     a {
       font-size: 10px !important;
+    }
+    i {
+      font-size: 12px !important;
+      margin-right: 2px !important;
     }
   }
   .Modal {
