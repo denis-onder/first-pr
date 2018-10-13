@@ -172,7 +172,7 @@ class Dashboard extends Component {
                 <div className="outputDiv" key={issue._id} id={issue._id}>
                   <div className="outputGroup">
                     <i className="fas fa-user"></i>
-                    <p>{issue.user}</p>
+                    <a href={`https://github.com/${issue.user}`} target="_blank">{issue.user}</a>
                   </div>
                   <br/>
                   <div className="outputGroup">
