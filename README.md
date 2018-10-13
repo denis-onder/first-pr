@@ -31,11 +31,3 @@
 * `npm run dev - Starts both the Node and React server at the same time.`
 
 ---
-
-#### TODO:
-
-> List of todos:
-
-* `Add Night Mode to the info section.`
-
-* `Make the info section responsive.`
