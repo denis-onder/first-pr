@@ -22,6 +22,7 @@
   "homepage": "https://github.com/DennisOnder/first-pr#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.6.0",
     "validator": "^11.0.0"
@@ -32,7 +33,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react": "^7.14.3",
     "nodemon": "^1.19.1"
   }
 }
