@@ -2,64 +2,74 @@
 .Dashboard {
   width: 100%;
   height: 100vh;
-  color: #F0F3BD;
-  background: #05668D; }
+  color: #f0f3bd;
+  background: #05668d;
+}
 
 .Dashboard #title {
   display: none;
   position: absolute;
   top: 25px;
   left: 100px;
-  font-family: 'Montserrat'; }
+  font-family: "Montserrat";
+}
 
 .Dashboard #menuBtn {
   display: none;
-  color: #F0F3BD;
+  color: #f0f3bd;
   position: fixed;
   top: 25px;
   right: 50px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .Dashboard #menuBtn:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 #output {
-  visibility: hidden;
   position: absolute;
   top: 150px;
   left: 100px;
-  font-family: 'Montserrat';
-  color: #F0F3BD;
+  font-family: "Montserrat";
+  color: #f0f3bd;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px; }
+  grid-gap: 15px;
+}
 
 #output .outputDiv {
   background-color: #028090;
   padding: 0.75em 2em;
   -webkit-box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 3px 33px -6px rgba(0, 0, 0, 0.75);
+}
 
 .outputGroup {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+}
 
 .outputGroup p {
-  margin: 0; }
+  margin: 0;
+}
 
 .outputGroup i {
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 .outputGroup a {
   text-decoration: none;
-  color: #F0F3BD; }
+  color: #f0f3bd;
+}
 
 .outputGroup a:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .Sidebar {
   position: fixed;
@@ -74,16 +84,19 @@
   justify-content: center;
   -webkit-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75); }
+  box-shadow: 3px 0px 33px -6px rgba(0, 0, 0, 0.75);
+}
 
 .Sidebar i {
   cursor: pointer;
   margin-bottom: 25px;
-  color: #F0F3BD; }
+  color: #f0f3bd;
+}
 
 .Sidebar i:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .Menu {
   position: fixed;
@@ -97,7 +110,8 @@
   background-color: #028090;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .Menu #closeMenuBtn {
   position: absolute;
@@ -105,67 +119,80 @@
   right: 50px;
   opacity: 0;
   float: right;
-  color: #F0F3BD;
-  cursor: pointer; }
+  color: #f0f3bd;
+  cursor: pointer;
+}
 
 .Menu #closeMenuBtn:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .Menu ul {
   list-style-type: none;
   width: 400px;
   position: relative;
   left: -40px;
-  font-family: 'Montserrat';
-  font-weight: bold; }
+  font-family: "Montserrat";
+  font-weight: bold;
+}
 
 .Menu ul #menuTitle {
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .Menu ul a {
-  color: #F0F3BD;
-  text-decoration: none; }
+  color: #f0f3bd;
+  text-decoration: none;
+}
 
 .Menu ul a:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .Menu ul .listItem {
   background-color: #0296a9;
   display: flex;
   align-items: center;
-  margin-bottom: 1px; }
+  margin-bottom: 1px;
+}
 
 .Menu ul .listItem i {
   margin-left: 10px;
   font-size: 24px;
-  color: #FF4500 !important;
-  font-weight: normal; }
+  color: #ff4500 !important;
+  font-weight: normal;
+}
 
 .Menu ul .listItem p {
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .Menu ul .listItem:hover {
   transition: 0.08s;
   background-color: #029fb3;
   margin-top: 2px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+}
 
 .openMenu {
   animation-name: openMenu;
   animation-duration: 0.2s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+}
 
 .openMenuResponsive {
   animation-name: openMenuResponsive;
   animation-duration: 0.2s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+}
 
 .displayArrow {
   animation-name: displayArrow;
   animation-duration: 0.2s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+}
 
 .Modal {
   display: none;
@@ -176,23 +203,28 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #F0F3BD;
-  font-family: 'Montserrat'; }
+  color: #f0f3bd;
+  font-family: "Montserrat";
+}
 
 .Modal .modalBody {
-  background-color: #00A896;
+  background-color: #00a896;
   margin: 20% auto;
   width: 60%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
-  animation-duration: 0.2s; }
+  animation-duration: 0.2s;
+}
 
 .Modal .modalBody .modalHead h3 {
   text-align: center;
   padding-top: 15px;
-  margin-right: 20px; }
+  margin-right: 20px;
+}
 
 .Modal .modalBody .modalHead #closeBtn {
   float: right;
@@ -200,83 +232,99 @@
   bottom: 40px;
   right: 25px;
   font-size: 22px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .Modal .modalBody .modalHead #closeBtn:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .Modal .modalInputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .Modal .modalInputs #submitBtn {
   padding: 1em 2em;
-  color: #F0F3BD;
-  font-family: 'Montserrat';
+  color: #f0f3bd;
+  font-family: "Montserrat";
   font-weight: bold;
   cursor: pointer;
-  background-color: #02C39A;
+  background-color: #02c39a;
   border-radius: 25px;
   border: none;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17); }
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
 
 .Modal .modalInputs #submitBtn:hover {
   transition: 0.2s;
-  padding: 1em 3em; }
+  padding: 1em 3em;
+}
 
 .Modal .modalInputs .errors {
   color: red;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .inputs {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-align: center;
   background: transparent;
   outline: 0;
   border: none;
   box-shadow: none;
-  color: #F0F3BD;
+  color: #f0f3bd;
   font-size: 16px;
-  border-bottom: 1px solid #F0F3BD;
-  padding-bottom: 0.75em; }
+  border-bottom: 1px solid #f0f3bd;
+  padding-bottom: 0.75em;
+}
 
 .inputs::placeholder {
   text-align: center;
-  color: #F0F3BD !important;
-  opacity: 1; }
+  color: #f0f3bd !important;
+  opacity: 1;
+}
 
 .inputs:-ms-input-placeholder {
   text-align: center;
-  color: #F0F3BD !important; }
+  color: #f0f3bd !important;
+}
 
 .inputs::-ms-input-placeholder {
   text-align: center;
-  color: #F0F3BD !important; }
+  color: #f0f3bd !important;
+}
 
 .inputs:focus::-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .inputs:focus:-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .inputs:focus::-webkit-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .inputs:focus::-ms-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent #F0F3BD !important; }
+  color: transparent #f0f3bd !important;
+}
 
 #Spinner {
   height: 100vh;
@@ -286,48 +334,59 @@
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .lds-ripple {
   display: inline-block;
   position: relative;
   width: 64px;
-  height: 64px; }
+  height: 64px;
+}
 
 .lds-ripple div {
   position: absolute;
-  border: 4px solid #F0F3BD;
+  border: 4px solid #f0f3bd;
   opacity: 1;
   border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
 
 .lds-ripple div:hover {
   transition: 0.2s;
-  color: white; }
+  color: white;
+}
 
 .lds-ripple:nth-child(2) {
-  animation-delay: -0.5s; }
+  animation-delay: -0.5s;
+}
 
 .text-container {
   position: absolute;
   top: 100px;
   left: 100px;
-  font-family: 'Montserrat';
-  color: #F0F3BD; }
+  font-family: "Montserrat";
+  color: #f0f3bd;
+}
 
 .text-container hr {
   opacity: 0.3;
-  margin-right: 2.5%; }
+  margin-right: 2.5%;
+}
 
 .text-container hr:hover {
   transition: 0.2s;
-  opacity: 0.7; }
+  opacity: 0.7;
+}
 
 @keyframes modalopen {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @keyframes lds-ripple {
   0% {
@@ -335,165 +394,233 @@
     left: 28px;
     width: 0;
     height: 0;
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
     top: -1px;
     left: -1px;
     width: 58px;
     height: 58px;
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 @keyframes openMenu {
   0% {
-    width: 0%; }
+    width: 0%;
+  }
   100% {
-    width: 370px; } }
+    width: 370px;
+  }
+}
 
 @keyframes openMenuResponsive {
   0% {
-    width: 0%; }
+    width: 0%;
+  }
   100% {
-    width: 210px; } }
+    width: 210px;
+  }
+}
 
 @keyframes displayArrow {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 @media (max-width: 1730px) {
   #output {
-    grid-template-columns: 1fr 1fr !important; } }
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
 
 @media (max-width: 1190px) {
   #output {
-    grid-template-columns: 1fr !important; }
+    grid-template-columns: 1fr !important;
+  }
   #menuBtn {
-    right: 25px !important; }
+    right: 25px !important;
+  }
   #closeMenuBtn {
-    right: 25px !important; } }
+    right: 25px !important;
+  }
+}
 
 @media (max-width: 760px) {
   #menuBtn {
     top: 15px !important;
     left: 20px !important;
-    z-index: 999 !important; } }
+    z-index: 999 !important;
+  }
+}
 
 @media (max-width: 660px) {
   .outputDiv {
     padding: 0.25em 0.5em !important;
-    width: 400px !important; }
+    width: 400px !important;
+  }
   .Sidebar {
-    width: 45px !important; }
+    width: 45px !important;
+  }
   .Sidebar i {
-    font-size: 22px !important; }
+    font-size: 22px !important;
+  }
   #title {
     top: 10px !important;
-    left: 60px !important; }
+    left: 60px !important;
+  }
   #title h1 {
-    margin: 0 !important; }
+    margin: 0 !important;
+  }
   #title p {
-    margin: 0 !important; }
+    margin: 0 !important;
+  }
   .text-container {
     left: 60px !important;
-    margin-right: 10px !important; }
+    margin-right: 10px !important;
+  }
   #closeMenuBtn {
     top: 15px !important;
     right: 15px !important;
-    font-size: 22px !important; }
+    font-size: 22px !important;
+  }
   #output {
     left: 60px !important;
-    top: 80px !important; }
+    top: 80px !important;
+  }
   #menuBtn {
     left: 13px !important;
-    font-size: 22px !important; }
+    font-size: 22px !important;
+  }
   .nightMode {
     left: 13px !important;
-    font-size: 22px !important; }
+    font-size: 22px !important;
+  }
   #menu p {
-    font-size: 14px !important; }
+    font-size: 14px !important;
+  }
   .Modal .modalBody .modalHead h3 {
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 10px 0 !important; }
+    padding: 10px 0 !important;
+  }
   .Modal .modalBody .modalHead #closeBtn {
     font-size: 16px !important;
     bottom: 30px !important;
-    right: 10px !important; }
+    right: 10px !important;
+  }
   .Modal .modalBody .modalInputs {
-    font-size: 10px !important; }
+    font-size: 10px !important;
+  }
   .Modal .modalBody .modalInputs input {
-    width: 50% !important; }
+    width: 50% !important;
+  }
   .Modal .modalBody .modalInputs input::placeholder {
-    font-size: 12px !important; }
+    font-size: 12px !important;
+  }
   .Modal .modalBody .modalInputs #submitBtn {
     padding: 0.5em 1em !important;
     font-weight: normal !important;
-    font-size: 12px !important; } }
+    font-size: 12px !important;
+  }
+}
 
 @media (max-width: 510px) {
   #title h1 {
-    font-size: 16px !important; }
+    font-size: 16px !important;
+  }
   #title p {
-    font-size: 14px !important; }
+    font-size: 14px !important;
+  }
   #output {
-    top: 55px !important; }
+    top: 55px !important;
+  }
   .outputDiv {
-    width: 350px; }
+    width: 350px;
+  }
   .outputDiv p {
-    font-size: 14px !important; }
+    font-size: 14px !important;
+  }
   .outputDiv a {
-    font-size: 14px !important; } }
+    font-size: 14px !important;
+  }
+}
 
 @media (max-width: 490px) {
   .outputDiv {
-    width: 315px !important; } }
+    width: 315px !important;
+  }
+}
 
 @media (max-width: 420px) {
   .outputDiv {
-    width: 275px !important; }
+    width: 275px !important;
+  }
   .outputDiv .outputGroup p {
-    font-size: 12px !important; }
+    font-size: 12px !important;
+  }
   .outputDiv .outputGroup a {
-    font-size: 12px !important; }
+    font-size: 12px !important;
+  }
   .outputDiv .outputGroup br {
-    display: none !important; }
+    display: none !important;
+  }
   .outputDiv:last-child {
-    margin-bottom: 10px !important; } }
+    margin-bottom: 10px !important;
+  }
+}
 
 @media (max-width: 390px) {
   .Modal .modalBody .modalInputs {
-    font-size: 8px !important; }
+    font-size: 8px !important;
+  }
   .Modal .modalBody .modalInputs input::placeholder {
-    font-size: 10px !important; } }
+    font-size: 10px !important;
+  }
+}
 
 @media (max-width: 360px) {
   .outputDiv {
-    width: 250px !important; }
+    width: 250px !important;
+  }
   .outputDiv p {
-    font-size: 10px !important; }
+    font-size: 10px !important;
+  }
   .outputDiv a {
-    font-size: 10px !important; }
+    font-size: 10px !important;
+  }
   .outputDiv i {
     font-size: 12px !important;
-    margin-right: 2px !important; }
+    margin-right: 2px !important;
+  }
   .Modal .modalBody .modalHead h3 {
     font-size: 12px !important;
     margin: 0 !important;
-    padding: 5px 0 !important; }
+    padding: 5px 0 !important;
+  }
   .Modal .modalBody .modalHead #closeBtn {
     font-size: 14px !important;
     bottom: 20px !important;
-    right: 5px !important; }
+    right: 5px !important;
+  }
   .Modal .modalBody .modalInputs {
-    font-size: 6px !important; }
+    font-size: 6px !important;
+  }
   .Modal .modalBody .modalInputs input {
-    width: 40% !important; }
+    width: 40% !important;
+  }
   .Modal .modalBody .modalInputs input::placeholder {
-    font-size: 8px !important; }
+    font-size: 8px !important;
+  }
   .Modal .modalBody .modalInputs #submitBtn {
     padding: 0.25em 0.75em !important;
-    font-size: 10px !important; } }
+    font-size: 10px !important;
+  }
+}
 
 .nightMode {
   position: fixed;
@@ -501,19 +628,23 @@
   left: 20px;
   z-index: 999;
   cursor: pointer;
-  color: #F0F3BD; }
+  color: #f0f3bd;
+}
 
 .nightMode:hover {
   transition: 0.2s;
-  color: #fff; }
+  color: #fff;
+}
 
 #nightModeBtn {
-  display: none; }
+  display: none;
+}
 
 .nightModePrimary {
   transition: 0.2s !important;
   background-color: #333 !important;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModePrimary h1,
 .nightModePrimary h2,
@@ -522,11 +653,13 @@
 .nightModePrimary p,
 .nightModePrimary i,
 .nightModePrimary a {
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeSecondary {
   transition: 0.2s !important;
-  background-color: #555 !important; }
+  background-color: #555 !important;
+}
 
 .nightModeSecondary h1,
 .nightModeSecondary h2,
@@ -535,11 +668,13 @@
 .nightModeSecondary p,
 .nightModeSecondary i,
 .nightModeSecondary a {
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeThird {
   transition: 0.2s !important;
-  background-color: #777 !important; }
+  background-color: #777 !important;
+}
 
 .nightModeThird h1,
 .nightModeThird h2,
@@ -548,11 +683,13 @@
 .nightModeThird p,
 .nightModeThird i,
 .nightModeThird a {
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeListItems {
   transition: 0.2s !important;
-  background-color: #626262 !important; }
+  background-color: #626262 !important;
+}
 
 .nightModeListItems h1,
 .nightModeListItems h2,
@@ -561,11 +698,13 @@
 .nightModeListItems p,
 .nightModeListItems i,
 .nightModeListItems a {
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeModal {
   transition: 0.2s !important;
-  background-color: #555 !important; }
+  background-color: #555 !important;
+}
 
 .nightModeModal h1,
 .nightModeModal h2,
@@ -574,46 +713,56 @@
 .nightModeModal p,
 .nightModeModal i,
 .nightModeModal a {
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeModal #submitBtn {
   transition: 0.2s !important;
   background-color: #3b3b3b !important;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeModal .inputs {
   color: #fff !important;
-  border-bottom: 1px solid #fff !important; }
+  border-bottom: 1px solid #fff !important;
+}
 
 .nightModeModal .inputs::placeholder {
   text-align: center;
   color: #fff !important;
-  opacity: 1; }
+  opacity: 1;
+}
 
 .nightModeModal .inputs:-ms-input-placeholder {
   text-align: center;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeModal .inputs::-ms-input-placeholder {
   text-align: center;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .nightModeModal .inputs:focus::-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .nightModeModal .inputs:focus:-moz-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .nightModeModal .inputs:focus::-webkit-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent !important; }
+  color: transparent !important;
+}
 
 .nightModeModal .inputs:focus::-ms-input-placeholder {
   text-align: center;
   transition: 0.1s !important;
-  color: transparent #fff !important; }
+  color: transparent #fff !important;
+}

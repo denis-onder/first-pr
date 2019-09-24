@@ -16,6 +16,7 @@ class Dashboard extends Component {
   }
 
   async fetchIssues() {
+    console.log(this.state.issues);
     try {
       const res = await axios.get("http://localhost:8000/api/issues");
       this.setState({ issues: res.data });
@@ -24,24 +25,27 @@ class Dashboard extends Component {
     }
   }
 
-  refetchIssues() {
+  async refetchIssues() {
     this.setState({ issues: [] });
+    this.showSpinner();
+    await this.fetchIssues();
+    this.hideSpinner();
+  }
+
+  showSpinner() {
     document.body.style.overflow = "hidden";
     document.getElementById("output").style.display = "none";
     document.getElementById("title").style.display = "none";
     document.getElementById("menuBtn").style.display = "none";
     document.getElementById("Spinner").style.display = "flex";
-    axios
-      .get("http://localhost:8000/api/issues")
-      .then(res => this.setState({ issues: res.data }))
-      .catch(err => console.log(err));
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-      document.getElementById("Spinner").style.display = "none";
-      document.getElementById("output").style.display = "grid";
-      document.getElementById("title").style.display = "block";
-      document.getElementById("menuBtn").style.display = "block";
-    }, 2750);
+  }
+
+  hideSpinner() {
+    document.body.style.overflow = "auto";
+    document.getElementById("Spinner").style.display = "none";
+    document.getElementById("output").style.display = "grid";
+    document.getElementById("title").style.display = "block";
+    document.getElementById("menuBtn").style.display = "block";
   }
 
   openModal() {
@@ -67,16 +71,10 @@ class Dashboard extends Component {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     document.body.style.overflow = "hidden";
-    this.fetchIssues();
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-      document.getElementById("Spinner").style.display = "none";
-      document.getElementById("output").style.visibility = "visible";
-      document.getElementById("title").style.display = "block";
-      document.getElementById("menuBtn").style.display = "block";
-    }, 2750);
+    await this.fetchIssues();
+    this.hideSpinner();
     this.modal = document.getElementById("Modal");
   }
 
@@ -159,19 +157,6 @@ class Dashboard extends Component {
             ))}
           </div>
         </div>
-        {localStorage.getItem("nightMode") ? (
-          <i
-            id="nightModeBtn"
-            className="nightMode fas fa-sun fa-2x"
-            onClick={this.clearNightMode}
-          ></i>
-        ) : (
-          <i
-            id="nightModeBtn"
-            className="nightMode fas fa-moon fa-2x"
-            onClick={this.nightMode}
-          ></i>
-        )}
       </div>
     );
   }
