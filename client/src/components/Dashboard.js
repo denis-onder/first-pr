@@ -1,26 +1,27 @@
 import React, { Component } from "react";
-import Menu from "../layout/Menu";
-import Modal from "./../modal/Modal";
+import Menu from "./layout/Menu";
+import Modal from "./Modal";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
+      modal: null,
       issues: []
     };
-    this.closeModalFromOutside = this.closeModalFromOutside.bind(this);
+    this.openModal = this.openModal.bind(this);
     this.fetchIssues = this.fetchIssues.bind(this);
     this.refetchIssues = this.refetchIssues.bind(this);
-    this.openModal = this.openModal.bind(this);
   }
 
-  fetchIssues() {
-    axios
-      .get("http://localhost:8000/api/issues")
-      .then(res => this.setState({ issues: res.data }))
-      .catch(err => console.log(err));
+  async fetchIssues() {
+    try {
+      const res = await axios.get("http://localhost:8000/api/issues");
+      this.setState({ issues: res.data });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   refetchIssues() {
@@ -30,7 +31,6 @@ class Dashboard extends Component {
     document.getElementById("title").style.display = "none";
     document.getElementById("menuBtn").style.display = "none";
     document.getElementById("Spinner").style.display = "flex";
-    document.getElementById("nightModeBtn").style.display = "none";
     axios
       .get("http://localhost:8000/api/issues")
       .then(res => this.setState({ issues: res.data }))
@@ -41,14 +41,11 @@ class Dashboard extends Component {
       document.getElementById("output").style.display = "grid";
       document.getElementById("title").style.display = "block";
       document.getElementById("menuBtn").style.display = "block";
-      document.getElementById("nightModeBtn").style.display = "block";
-      this.checkNightMode();
     }, 2750);
   }
 
   openModal() {
-    const modal = document.getElementById("Modal");
-    modal.style.display = "block";
+    this.modal.style.display = "block";
   }
 
   closeModalFromOutside(e) {
@@ -70,65 +67,6 @@ class Dashboard extends Component {
     }
   }
 
-  nightMode() {
-    const nightMode = true;
-    localStorage.setItem("nightMode", nightMode);
-    const sidebar = document.getElementById("sidebar");
-    const dashboard = document.getElementById("dashboard");
-    const menu = document.getElementById("menu");
-    const outputDivs = document.querySelectorAll(".outputDiv");
-    const menuItems = document.querySelectorAll(".listItem");
-    const modal = document.getElementById("modalBody");
-    const body = document.body;
-    modal.classList.add("nightModeModal");
-    body.classList.add("nightModePrimary");
-    sidebar.classList.add("nightModeSecondary");
-    dashboard.classList.add("nightModePrimary");
-    menu.classList.add("nightModeSecondary");
-    for (let i = 0; i < outputDivs.length; i++) {
-      outputDivs[i].classList.add("nightModeSecondary");
-    }
-    for (let i = 0; i < menuItems.length; i++) {
-      menuItems[i].classList.add("nightModeListItems");
-    }
-    const nightModeBtn = document.getElementById("nightModeBtn");
-    nightModeBtn.style.display = "none";
-  }
-
-  checkNightMode() {
-    if (localStorage.getItem("nightMode")) {
-      this.nightMode();
-    }
-    const nightModeBtn = document.getElementById("nightModeBtn");
-    nightModeBtn.style.display = "block";
-  }
-
-  clearNightMode() {
-    if (localStorage.getItem("nightMode")) {
-      localStorage.removeItem("nightMode");
-      const sidebar = document.getElementById("sidebar");
-      const dashboard = document.getElementById("dashboard");
-      const menu = document.getElementById("menu");
-      const outputDivs = document.querySelectorAll(".outputDiv");
-      const menuItems = document.querySelectorAll(".listItem");
-      const modal = document.getElementById("modalBody");
-      const body = document.body;
-      body.classList.remove("nightModePrimary");
-      modal.classList.remove("nightModeModal");
-      sidebar.classList.remove("nightModeSecondary");
-      dashboard.classList.remove("nightModePrimary");
-      menu.classList.remove("nightModeSecondary");
-      for (let i = 0; i < outputDivs.length; i++) {
-        outputDivs[i].classList.remove("nightModeSecondary");
-      }
-      for (let i = 0; i < menuItems.length; i++) {
-        menuItems[i].classList.remove("nightModeListItems");
-      }
-      const nightModeBtn = document.getElementById("nightModeBtn");
-      nightModeBtn.style.display = "none";
-    }
-  }
-
   componentDidMount() {
     document.body.style.overflow = "hidden";
     this.fetchIssues();
@@ -138,9 +76,8 @@ class Dashboard extends Component {
       document.getElementById("output").style.visibility = "visible";
       document.getElementById("title").style.display = "block";
       document.getElementById("menuBtn").style.display = "block";
-      document.getElementById("nightModeBtn").style.display = "block";
-      this.checkNightMode();
     }, 2750);
+    this.modal = document.getElementById("Modal");
   }
 
   render() {
@@ -169,9 +106,6 @@ class Dashboard extends Component {
               className="fas fa-sync-alt fa-2x"
               onClick={this.refetchIssues}
             ></i>
-            <Link to="/about">
-              <i className="fas fa-question-circle fa-2x"></i>
-            </Link>
           </div>
           <div id="title">
             <h1>FirstPR</h1>
