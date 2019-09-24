@@ -6,14 +6,18 @@ const config = require("./config");
 const port = process.env.PORT || 8000;
 const issues = require("./routes/api/issues");
 const path = require("path");
+const cors = require("cors");
 
 // BodyParser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Cors
+app.use(cors());
+
 // Database
 mongoose
-  .connect(config.mongoURI, { useNewUrlParser: true })
+  .connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected."))
   .catch(err => console.log(err));
 
